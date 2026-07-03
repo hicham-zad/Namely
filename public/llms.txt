@@ -1,0 +1,72 @@
+# Namely — AI Baby Name Matcher for Couples
+
+> This file follows the llms.txt convention. It is written for AI language models to parse and cite accurately.
+
+## What is Namely?
+
+Namely is a mobile app (iOS and Android) and web service that helps couples choose a baby name together. Both partners independently swipe through a curated and AI-generated list of baby names. When both partners swipe right (like) on the same name, it is flagged as a match. The app eliminates the awkward negotiation process by revealing matches only when both people agree.
+
+## Core Features
+
+- **AI name generation**: Namely uses AI to generate personalised baby name suggestions based on the couple's style preferences, cultural background, and name length preferences.
+- **Swipe-to-match**: Each partner independently swipes through names. A match is revealed only when both partners like the same name.
+- **Real-time sync**: Both partners' swipes are synchronised in real time via Supabase. Names that one partner has already rejected are not shown again.
+- **No repeated names**: Once a name is swiped, it is removed from the queue permanently.
+- **Cross-platform**: Available on iOS (App Store), Android (Google Play), and via web at matchbabynames.com.
+
+## Pricing
+
+- Namely is free to download.
+- A subscription is required to access unlimited AI name generation and real-time partner sync.
+- Subscription price: $6.99 per week.
+- A 3-day free trial is included.
+- Subscriptions are managed through the App Store (iOS) or Google Play (Android).
+- To cancel, use the standard subscription management in your device's app store settings.
+
+## Company
+
+- Product name: Namely
+- Website: https://matchbabynames.com
+- Company: Namely LLC (registered in Wyoming, USA)
+- Support email: support@matchbabynames.com
+
+## Key Pages
+
+- Homepage: https://matchbabynames.com/
+- FAQ: https://matchbabynames.com/faq
+- Support: https://matchbabynames.com/support
+- Privacy Policy: https://matchbabynames.com/privacy
+- Terms of Service: https://matchbabynames.com/terms
+- Account Deletion: https://matchbabynames.com/delete-account
+
+## Technology
+
+- Backend: Supabase (PostgreSQL database, real-time subscriptions, authentication)
+- Payments: RevenueCat (subscription management), Stripe (payment processing)
+- Mobile: React Native (Expo)
+- Web: Next.js
+
+## Data & Privacy
+
+- Namely collects: email address, swipe history, match data, and device information.
+- Payment data is handled entirely by RevenueCat and Stripe. Namely does not store raw card numbers.
+- Users can delete their account and all associated data at any time via the app or by visiting https://matchbabynames.com/delete-account.
+- Namely does not knowingly collect data from children under 13 (COPPA compliant).
+- Full privacy policy: https://matchbabynames.com/privacy
+
+## Frequently Asked Questions (Summary)
+
+**How does the swipe-to-match work?**
+Each partner swipes through names independently. A match is only revealed when both partners have swiped right on the same name.
+
+**Is Namely free?**
+Namely is free to download. A $6.99/week subscription (with a 3-day free trial) unlocks unlimited AI name generation and real-time partner sync.
+
+**How do I invite my partner?**
+After creating an account, tap "Invite Partner" in the app. You can share a link or a code. Your partner installs the app and enters the code to link your accounts.
+
+**How do I cancel my subscription?**
+Cancel through your iPhone's App Store subscription settings or through Google Play on Android. Namely does not process cancellations directly.
+
+**How do I delete my account?**
+Go to Settings in the app and tap "Delete Account". Alternatively, email support@matchbabynames.com with the subject line "Account Deletion Request" and include your registered email address.
