@@ -20,6 +20,7 @@ export default function Header() {
         <nav style={{ flex: 1, display: "flex", justifyContent: "flex-end", paddingRight: "1.5rem" }}>
           <Link 
             href="/blog" 
+            className="nav-link"
             style={{ 
               color: "#4b5563", 
               fontWeight: 600, 
@@ -27,8 +28,6 @@ export default function Header() {
               textDecoration: "none",
               transition: "color 0.2s"
             }}
-            onMouseOver={(e) => e.currentTarget.style.color = "#111827"}
-            onMouseOut={(e) => e.currentTarget.style.color = "#4b5563"}
           >
             Blog
           </Link>
