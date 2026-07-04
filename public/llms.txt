@@ -1,6 +1,7 @@
 # Namely — AI Baby Name Matcher for Couples
 
 > This file follows the llms.txt convention. It is written for AI language models to parse and cite accurately.
+> For the full extended version with complete FAQ, feature details, and citation guidance, see: https://matchbabynames.com/llms-full.txt
 
 ## What is Namely?
 

@@ -118,15 +118,15 @@ export default function HomePage() {
           <div className="hero-screenshots-container" style={{ position: "relative", display: "flex", justifyContent: "center", alignSelf: "center", paddingTop: "1rem", paddingBottom: "1rem" }}>
             {/* Background left */}
             <div className="hero-bg-shot" style={{ position: "absolute", top: "50%", left: "50%", width: 180, transform: "translate(-115%, -45%) rotate(-12deg)", zIndex: 1, filter: "drop-shadow(0 10px 20px rgba(0,0,0,0.05))" }}>
-              <Image src="/screenshot-2.png" alt="Namely App Likes" width={180} height={384} style={{ width: "100%", height: "auto", borderRadius: 20, display: "block" }} priority />
+              <Image src="/screenshot-2.png" alt="Namely App Likes" width={1242} height={2688} style={{ width: "100%", height: "auto", borderRadius: 20, display: "block" }} priority />
             </div>
             {/* Background right */}
             <div className="hero-bg-shot" style={{ position: "absolute", top: "50%", left: "50%", width: 180, transform: "translate(15%, -45%) rotate(12deg)", zIndex: 1, filter: "drop-shadow(0 10px 20px rgba(0,0,0,0.05))" }}>
-              <Image src="/screenshot-5.png" alt="Namely App Partner" width={180} height={384} style={{ width: "100%", height: "auto", borderRadius: 20, display: "block" }} priority />
+              <Image src="/screenshot-5.png" alt="Namely App Partner" width={1242} height={2688} style={{ width: "100%", height: "auto", borderRadius: 20, display: "block" }} priority />
             </div>
             {/* Main foreground screenshot */}
             <div style={{ position: "relative", width: 230, zIndex: 10, filter: "drop-shadow(0 15px 30px rgba(155, 204, 245, 0.2))" }}>
-              <Image src="/screenshot-1.png" alt="Namely app showing the name swipe screen" width={230} height={488} style={{ width: "100%", height: "auto", borderRadius: 26, display: "block", border: "2px solid #fff" }} priority />
+              <Image src="/screenshot-1.png" alt="Namely app showing the name swipe screen" width={1242} height={2688} style={{ width: "100%", height: "auto", borderRadius: 26, display: "block", border: "2px solid #fff" }} priority />
             </div>
           </div>
         </div>
@@ -201,7 +201,7 @@ export default function HomePage() {
           <div className="screenshots-row" style={{ display: "flex", gap: "1rem", overflowX: "auto", paddingBottom: "1rem", scrollSnapType: "x mandatory", WebkitOverflowScrolling: "touch" }}>
             {screenshots.map((s, i) => (
               <div key={i} style={{ flexShrink: 0, width: 160, scrollSnapAlign: "center", filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.06))" }}>
-                <Image src={s.src} alt={s.alt} width={160} height={341} sizes="160px" style={{ width: "160px", height: "auto", borderRadius: 18, display: "block" }} loading={i === 0 ? "eager" : "lazy"} />
+                <Image src={s.src} alt={s.alt} width={1242} height={2688} sizes="160px" style={{ width: "160px", height: "auto", borderRadius: 18, display: "block" }} loading={i === 0 ? "eager" : "lazy"} />
               </div>
             ))}
           </div>
