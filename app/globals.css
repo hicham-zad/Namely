@@ -63,3 +63,94 @@ details > summary::-webkit-details-marker { display: none; }
 .prose-legal ol { list-style: decimal; padding-left: 1.5rem; margin-bottom: 1rem; }
 .prose-legal a { color: #2d9b8a; text-decoration: underline; }
 .prose-legal a:hover { color: #1a6b5e; }
+
+/* ── Blog post prose ── */
+.prose-blog {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #374151;
+  max-width: 100%;
+}
+.prose-blog h1,
+.prose-blog h2,
+.prose-blog h3,
+.prose-blog h4 {
+  font-family: var(--font-outfit), system-ui, sans-serif;
+  color: #1e293b;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+}
+.prose-blog h1 { font-size: 2rem; font-weight: 900; }
+.prose-blog h2 { font-size: 1.4rem; font-weight: 800; padding-bottom: 0.4rem; border-bottom: 2px solid #f1f5f9; }
+.prose-blog h3 { font-size: 1.1rem; font-weight: 700; }
+.prose-blog h4 { font-size: 1rem; font-weight: 700; }
+
+.prose-blog p { margin-bottom: 1.25rem; }
+
+.prose-blog a { color: #9bccf5; text-decoration: underline; }
+.prose-blog a:hover { color: #fb9cb0; }
+
+.prose-blog ul { list-style: disc; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+.prose-blog ol { list-style: decimal; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+.prose-blog li { margin-bottom: 0.4rem; line-height: 1.7; }
+
+.prose-blog strong { font-weight: 700; color: #1e293b; }
+.prose-blog em { font-style: italic; }
+
+.prose-blog blockquote {
+  border-left: 4px solid #9bccf5;
+  padding: 0.5rem 1rem;
+  margin: 1.5rem 0;
+  background: #f8fafc;
+  border-radius: 0 8px 8px 0;
+  color: #4b5563;
+  font-style: italic;
+}
+
+.prose-blog table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+.prose-blog th {
+  background: #f8fafc;
+  font-weight: 700;
+  text-align: left;
+  padding: 0.6rem 0.9rem;
+  border-bottom: 2px solid #e5e7eb;
+  color: #1e293b;
+}
+.prose-blog td {
+  padding: 0.6rem 0.9rem;
+  border-bottom: 1px solid #f1f5f9;
+  color: #4b5563;
+}
+.prose-blog tr:last-child td { border-bottom: none; }
+
+.prose-blog code {
+  background: #f1f5f9;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  font-size: 0.85em;
+  font-family: "Courier New", monospace;
+  color: #1e293b;
+}
+.prose-blog pre {
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  overflow-x: auto;
+  margin: 1.25rem 0;
+  font-size: 0.85rem;
+}
+.prose-blog pre code { background: none; color: inherit; padding: 0; }
+
+.prose-blog hr {
+  border: none;
+  border-top: 2px solid #f1f5f9;
+  margin: 2rem 0;
+}
+

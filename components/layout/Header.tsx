@@ -16,6 +16,24 @@ export default function Header() {
           </span>
         </Link>
 
+        {/* Navigation */}
+        <nav style={{ flex: 1, display: "flex", justifyContent: "flex-end", paddingRight: "1.5rem" }}>
+          <Link 
+            href="/blog" 
+            style={{ 
+              color: "#4b5563", 
+              fontWeight: 600, 
+              fontSize: "0.95rem", 
+              textDecoration: "none",
+              transition: "color 0.2s"
+            }}
+            onMouseOver={(e) => e.currentTarget.style.color = "#111827"}
+            onMouseOut={(e) => e.currentTarget.style.color = "#4b5563"}
+          >
+            Blog
+          </Link>
+        </nav>
+
         {/* CTA */}
         <a href="https://apps.apple.com/app/namely" target="_blank" rel="noopener noreferrer" id="header-cta-btn"
           style={{ background: "#9bccf5", color: "#1f2937", fontWeight: 700, fontSize: "0.875rem", padding: "0.5rem 1.25rem", borderRadius: 999, textDecoration: "none", display: "inline-block" }}>
