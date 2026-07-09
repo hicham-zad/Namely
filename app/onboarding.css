@@ -1,0 +1,419 @@
+/* ═══════════════════════════════════════════════
+   ONBOARDING FLOW — Web
+   Pinned to light mode, full-page stepped flow.
+═══════════════════════════════════════════════ */
+
+.ob-wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F8F7FF;
+  padding: 24px 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative background orbs */
+.ob-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+.ob-orb-1 {
+  width: 500px; height: 500px;
+  top: -160px; left: -160px;
+  background: radial-gradient(circle, rgba(255,107,138,0.12) 0%, transparent 65%);
+  filter: blur(40px);
+}
+.ob-orb-2 {
+  width: 400px; height: 400px;
+  bottom: -100px; right: -100px;
+  background: radial-gradient(circle, rgba(155,204,245,0.14) 0%, transparent 65%);
+  filter: blur(40px);
+}
+
+/* Main card */
+.ob-card {
+  position: relative; z-index: 1;
+  background: #ffffff;
+  border-radius: 28px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.10);
+  border: 1px solid #F0EEF8;
+  width: 100%;
+  max-width: 540px;
+  overflow: hidden;
+}
+
+/* Progress bar strip at top of card */
+.ob-progress-track {
+  width: 100%;
+  height: 4px;
+  background: #F0EEF8;
+}
+.ob-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #FF6B8A, #FF6BAE);
+  border-radius: 0 4px 4px 0;
+  transition: width 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Card body */
+.ob-body {
+  padding: 32px 36px 28px;
+}
+
+/* Step label */
+.ob-step-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #FF6B8A;
+  margin-bottom: 10px;
+}
+
+/* Titles */
+.ob-title {
+  font-family: var(--font-outfit), system-ui, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #1C1C1E;
+  letter-spacing: -0.02em;
+  margin: 0 0 6px;
+  line-height: 1.15;
+}
+.ob-subtitle {
+  font-size: 0.92rem;
+  color: #6B6B6B;
+  margin: 0 0 28px;
+  line-height: 1.5;
+}
+
+/* Step animation */
+.ob-step {
+  animation: obSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes obSlideIn {
+  from { opacity: 0; transform: translateX(28px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+.ob-step-back {
+  animation: obSlideInBack 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes obSlideInBack {
+  from { opacity: 0; transform: translateX(-28px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* ── Step 1: Gender cards ── */
+.ob-gender-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.ob-gender-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  border-radius: 16px;
+  border: 2px solid #EEECF0;
+  background: #FAFAFA;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease, transform 0.1s ease;
+  user-select: none;
+  text-align: left;
+}
+.ob-gender-card:hover {
+  border-color: #FF6B8A;
+  background: rgba(255,107,138,0.04);
+  transform: translateY(-1px);
+}
+.ob-gender-card--selected {
+  border-color: #FF6B8A;
+  background: rgba(255,107,138,0.06);
+}
+.ob-gender-card__emoji {
+  font-size: 2.2rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.ob-gender-card__label {
+  font-family: var(--font-outfit), system-ui, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1C1C1E;
+  flex: 1;
+}
+.ob-gender-card__check {
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: #FF6B8A;
+  color: white;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  animation: checkPop 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+@keyframes checkPop {
+  from { transform: scale(0); }
+  to   { transform: scale(1); }
+}
+
+/* ── Steps 2 & 3: Chip grids ── */
+.ob-chip-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.ob-chip {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1.5px solid #E5E3DF;
+  background: #FAFAFA;
+  color: #1C1C1E;
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.12s ease;
+  user-select: none;
+}
+.ob-chip:hover {
+  border-color: #FF6B8A;
+  color: #FF6B8A;
+}
+.ob-chip--selected {
+  background: rgba(255,107,138,0.1);
+  border-color: #FF6B8A;
+  color: #FF6B8A;
+  font-weight: 700;
+}
+
+/* Count badge under chips */
+.ob-count {
+  font-size: 0.8rem;
+  color: #AEAEB2;
+  margin-bottom: 20px;
+}
+.ob-count strong {
+  color: #FF6B8A;
+}
+
+/* ── Step 3: Search ── */
+.ob-search-wrap {
+  position: relative;
+  margin-bottom: 16px;
+}
+.ob-search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #AEAEB2;
+  pointer-events: none;
+}
+.ob-search {
+  width: 100%;
+  padding: 11px 14px 11px 40px;
+  border: 1.5px solid #E5E3DF;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  color: #1C1C1E;
+  background: #FAFAFA;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.ob-search:focus {
+  border-color: #FF6B8A;
+  background: #fff;
+}
+.ob-search::placeholder { color: #AEAEB2; }
+
+/* Scrollable chip area (step 3 only) */
+.ob-chips-scroll {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 16px;
+  padding-right: 4px;
+}
+.ob-chips-scroll::-webkit-scrollbar { width: 4px; }
+.ob-chips-scroll::-webkit-scrollbar-thumb { background: #E5E3DF; border-radius: 4px; }
+
+/* ── Step 4: Partner linking ── */
+.ob-pair-invited {
+  background: rgba(255,107,138,0.07);
+  border: 1px solid rgba(255,107,138,0.2);
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.ob-pair-invited__icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
+.ob-pair-invited__text { font-size: 0.9rem; color: #1C1C1E; line-height: 1.5; }
+.ob-pair-invited__text strong { color: #FF6B8A; }
+
+.ob-pair-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.ob-pair-tab {
+  flex: 1;
+  padding: 10px;
+  border: 1.5px solid #E5E3DF;
+  border-radius: 10px;
+  background: #FAFAFA;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #6B6B6B;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.12s;
+}
+.ob-pair-tab--active {
+  border-color: #FF6B8A;
+  background: rgba(255,107,138,0.08);
+  color: #FF6B8A;
+}
+
+.ob-invite-code {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #F8F7FF;
+  border: 2px dashed #E5E3DF;
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+.ob-invite-code__value {
+  font-family: 'Courier New', monospace;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  color: #1C1C1E;
+}
+.ob-invite-code__copy {
+  background: none; border: none; cursor: pointer;
+  color: #AEAEB2; padding: 6px; border-radius: 8px;
+  transition: all 0.12s;
+  display: flex; align-items: center;
+}
+.ob-invite-code__copy:hover { color: #FF6B8A; background: rgba(255,107,138,0.1); }
+.ob-invite-code__copied { color: #34C759 !important; }
+
+.ob-join-input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1.5px solid #E5E3DF;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #1C1C1E;
+  background: #FAFAFA;
+  outline: none;
+  transition: border-color 0.15s;
+  margin-bottom: 12px;
+}
+.ob-join-input:focus { border-color: #FF6B8A; background: #fff; }
+.ob-join-input::placeholder { letter-spacing: 0; font-weight: 400; font-size: 0.9rem; color: #AEAEB2; text-transform: none; }
+
+/* ── Footer ── */
+.ob-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+.ob-cta {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #FF6B8A, #FF6BAE);
+  color: white;
+  font-family: var(--font-outfit), system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+.ob-cta:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255,107,138,0.35);
+}
+.ob-cta:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.ob-skip {
+  background: none; border: none; cursor: pointer;
+  font-size: 0.82rem;
+  color: #AEAEB2;
+  text-decoration: underline;
+  padding: 4px;
+  transition: color 0.12s;
+}
+.ob-skip:hover { color: #6B6B6B; }
+
+/* Back button */
+.ob-back {
+  background: none; border: none; cursor: pointer;
+  display: flex; align-items: center; gap: 6px;
+  font-size: 0.82rem; color: #AEAEB2;
+  padding: 0; margin-bottom: 20px;
+  transition: color 0.12s;
+}
+.ob-back:hover { color: #1C1C1E; }
+
+/* Loading spinner (submit state) */
+.ob-spinner {
+  width: 18px; height: 18px;
+  border: 2.5px solid rgba(255,255,255,0.4);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: obSpin 0.7s linear infinite;
+}
+@keyframes obSpin { to { transform: rotate(360deg); } }
+
+/* Error message */
+.ob-error {
+  font-size: 0.82rem;
+  color: #D4697A;
+  text-align: center;
+  margin-top: 8px;
+}
+
+/* Logo row */
+.ob-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+.ob-logo-text {
+  font-family: var(--font-outfit), system-ui, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #1C1C1E;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 480px) {
+  .ob-body { padding: 24px 22px 22px; }
+  .ob-title { font-size: 1.5rem; }
+  .ob-gender-card__emoji { font-size: 1.8rem; }
+}

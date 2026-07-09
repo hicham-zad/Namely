@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer style={{ background: "#f8fafc", color: "#64748b", padding: "1.5rem 1.5rem" }}>
+    <footer style={{ background: "var(--surface)", color: "var(--text3)", padding: "1.5rem 1.5rem", borderTop: "1px solid var(--border-lt)" }}>
       <div style={{ maxWidth: 1152, margin: "0 auto", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: "1rem" }}>
         <p style={{ fontSize: "0.75rem", margin: 0 }}>
           © {year} Namely LLC · Wyoming, USA
@@ -18,11 +18,11 @@ export default function Footer() {
             { href: "mailto:support@matchbabynames.com", label: "Contact", ext: true },
           ].map((l) =>
             l.ext ? (
-              <a key={l.href} href={l.href} style={{ fontSize: "0.75rem", color: "#64748b", textDecoration: "none" }}>
+              <a key={l.href} href={l.href} style={{ fontSize: "0.75rem", color: "var(--text2)", textDecoration: "none" }}>
                 {l.label}
               </a>
             ) : (
-              <Link key={l.href} href={l.href} style={{ fontSize: "0.75rem", color: "#64748b", textDecoration: "none" }}>
+              <Link key={l.href} href={l.href} style={{ fontSize: "0.75rem", color: "var(--text2)", textDecoration: "none" }}>
                 {l.label}
               </Link>
             )
