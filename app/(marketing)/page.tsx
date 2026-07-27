@@ -289,6 +289,12 @@ export default function HomePage() {
               <Globe size={18} /> Start Matching
             </Link>
           </div>
+          <div style={{ display: "flex", justifyContent: "center", marginTop: "3rem" }}>
+            <a href="https://daniellaunches.com" target="_blank" rel="noopener noreferrer">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="https://daniellaunches.com/badge-light.svg" alt="Featured on DanielLaunches" width="220" height="48" />
+            </a>
+          </div>
         </div>
       </section>
     </div>
