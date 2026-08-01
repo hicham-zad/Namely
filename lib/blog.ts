@@ -203,7 +203,24 @@ export async function publishNextDraft(): Promise<{
   title?: string;
   message: string;
 }> {
-  // Find oldest draft (FIFO queue by created_at)
+  // 1. Check if a post was already published today
+  const startOfToday = new Date();
+  startOfToday.setUTCHours(0, 0, 0, 0);
+
+  const { count, error: countErr } = await db()
+    .from("blog_posts")
+    .select("*", { count: "exact", head: true })
+    .eq("status", "published")
+    .gte("published_at", startOfToday.toISOString());
+
+  if (countErr) throw countErr;
+
+  if (count && count > 0) {
+    console.log(`[AutoPublish] ⏭️ Skipped: A post was already published today.`);
+    return { published: false, message: "A post was already published today." };
+  }
+
+  // 2. Find oldest draft (FIFO queue by created_at)
   const { data: draft, error: fetchErr } = await db()
     .from("blog_posts")
     .select("slug, title")

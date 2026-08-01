@@ -17,9 +17,12 @@ import { publishNextDraft } from "@/lib/blog";
 
 export const runtime = "nodejs";
 
-export async function POST(req: NextRequest) {
-  // Verify admin secret
-  const secret = req.headers.get("x-blog-admin-secret");
+async function handlePublish(req: NextRequest) {
+  // Verify admin secret via header or URL parameter
+  const headerSecret = req.headers.get("x-blog-admin-secret");
+  const urlSecret = req.nextUrl.searchParams.get("secret");
+  const secret = headerSecret || urlSecret;
+
   if (!secret || secret !== process.env.BLOG_ADMIN_SECRET) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
@@ -35,4 +38,12 @@ export async function POST(req: NextRequest) {
       { status: 500 }
     );
   }
+}
+
+export async function POST(req: NextRequest) {
+  return handlePublish(req);
+}
+
+export async function GET(req: NextRequest) {
+  return handlePublish(req);
 }
