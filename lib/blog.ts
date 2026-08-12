@@ -203,7 +203,7 @@ export async function publishNextDraft(): Promise<{
   title?: string;
   message: string;
 }> {
-  // 1. Check if a post was already published today
+  // 1. Check if the daily limit of 2 posts has been reached
   const startOfToday = new Date();
   startOfToday.setUTCHours(0, 0, 0, 0);
 
@@ -215,9 +215,9 @@ export async function publishNextDraft(): Promise<{
 
   if (countErr) throw countErr;
 
-  if (count && count > 0) {
-    console.log(`[AutoPublish] ⏭️ Skipped: A post was already published today.`);
-    return { published: false, message: "A post was already published today." };
+  if (count !== null && count >= 2) {
+    console.log(`[AutoPublish] ⏭️ Skipped: Two posts were already published today.`);
+    return { published: false, message: "Two posts were already published today." };
   }
 
   // 2. Find oldest draft (FIFO queue by created_at)

@@ -11,7 +11,7 @@
 
 The core insight: couples often disagree on baby names because the negotiation is awkward. Namely removes that friction by keeping individual votes private until a mutual match occurs — like Tinder, but for baby names.
 
-- **App Store (iOS)**: https://apps.apple.com/app/namely
+- **App Store (iOS)**: https://apps.apple.com/us/app/namely-baby-name-matcher/id6786483368
 - **Google Play (Android)**: https://play.google.com/store/apps/namely
 - **Web**: https://matchbabynames.com
 

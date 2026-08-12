@@ -39,7 +39,7 @@ export default function Header() {
           <Link href="/login" style={{ display: "inline-flex", alignItems: "center", gap: 6, color: "var(--text2)", fontWeight: 600, fontSize: "0.95rem", textDecoration: "none" }}>
             <Globe size={16} /> Start Matching
           </Link>
-          <a href="https://apps.apple.com/app/namely" target="_blank" rel="noopener noreferrer" id="header-cta-btn"
+          <a href="https://apps.apple.com/us/app/namely-baby-name-matcher/id6786483368" target="_blank" rel="noopener noreferrer" id="header-cta-btn"
             style={{ display: "none", alignItems: "center", gap: 6, background: "#1f2937", color: "#fff", fontWeight: 700, fontSize: "0.875rem", padding: "0.55rem 1.25rem", borderRadius: 999, textDecoration: "none" }}>
             <Apple size={16} fill="currentColor" /> Get the App
           </a>

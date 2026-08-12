@@ -23,7 +23,7 @@ const appSchema: WithContext<SoftwareApplication> = {
   offers: { "@type": "Offer", price: "5.99", priceCurrency: "USD", description: "Free to download. $5.99/month with 3-day free trial." },
   aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", ratingCount: "120" },
   description: "Namely helps couples choose a baby name together using AI-powered suggestions and a swipe-to-match mechanic.",
-  url: "https://matchbabynames.com", downloadUrl: "https://apps.apple.com/app/namely",
+  url: "https://matchbabynames.com", downloadUrl: "https://apps.apple.com/us/app/namely-baby-name-matcher/id6786483368",
 };
 
 const LOGO_PINK = "#fb9cb0";
@@ -32,7 +32,7 @@ const TEXT_DARK = "#1f2937";
 
 function AppStoreBadge({ id }: { id: string }) {
   return (
-    <a href="https://apps.apple.com/app/namely" target="_blank" rel="noopener noreferrer" id={id}
+    <a href="https://apps.apple.com/us/app/namely-baby-name-matcher/id6786483368" target="_blank" rel="noopener noreferrer" id={id}
       aria-label="Download Namely on the App Store"
       style={{ display: "inline-flex", alignItems: "center", gap: 8, background: TEXT_DARK, color: "#fff", fontWeight: 700, fontSize: "0.875rem", padding: "0.65rem 1.25rem", borderRadius: 14, textDecoration: "none" }}>
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -107,7 +107,7 @@ export default function HomePage() {
             </p>
 
             <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem", marginBottom: "1.5rem" }}>
-              <a href="https://apps.apple.com/app/namely" target="_blank" rel="noopener noreferrer" id="hero-main-cta"
+              <a href="https://apps.apple.com/us/app/namely-baby-name-matcher/id6786483368" target="_blank" rel="noopener noreferrer" id="hero-main-cta"
                 style={{ display: "inline-flex", alignItems: "center", gap: 8, background: LOGO_BLUE, color: TEXT_DARK, fontWeight: 800, fontSize: "1rem", padding: "0.85rem 1.75rem", borderRadius: 999, textDecoration: "none", boxShadow: "0 4px 12px rgba(155, 204, 245, 0.4)" }}>
                 <Apple size={20} fill="currentColor" /> Get the App Free
               </a>
@@ -280,7 +280,7 @@ export default function HomePage() {
             Download Namely free. Start your 3-day trial and invite your partner today.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "0.75rem" }}>
-            <a href="https://apps.apple.com/app/namely" target="_blank" rel="noopener noreferrer" id="cta-main-btn"
+            <a href="https://apps.apple.com/us/app/namely-baby-name-matcher/id6786483368" target="_blank" rel="noopener noreferrer" id="cta-main-btn"
               style={{ display: "inline-flex", alignItems: "center", gap: 8, background: LOGO_BLUE, color: TEXT_DARK, fontWeight: 800, fontSize: "1rem", padding: "0.85rem 1.75rem", borderRadius: 999, textDecoration: "none", boxShadow: "0 4px 12px rgba(155, 204, 245, 0.4)" }}>
               <Apple size={20} fill="currentColor" /> Get the App Free
             </a>

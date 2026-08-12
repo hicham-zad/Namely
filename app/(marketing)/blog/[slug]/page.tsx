@@ -179,7 +179,7 @@ export default async function BlogPostPage({
               Swipe together, match instantly, and agree without the argument.
             </p>
             <a
-              href="https://apps.apple.com/app/namely"
+              href="https://apps.apple.com/us/app/namely-baby-name-matcher/id6786483368"
               target="_blank"
               rel="noopener noreferrer"
               id="blog-sidebar-cta"
@@ -223,7 +223,7 @@ export default async function BlogPostPage({
           <p style={{ color: "var(--text2)", fontSize: "0.9rem", marginBottom: "1.25rem" }}>
             Download Namely free. 3-day trial, no credit card needed.
           </p>
-          <a href="https://apps.apple.com/app/namely" target="_blank" rel="noopener noreferrer" id="blog-post-bottom-cta"
+          <a href="https://apps.apple.com/us/app/namely-baby-name-matcher/id6786483368" target="_blank" rel="noopener noreferrer" id="blog-post-bottom-cta"
             style={{ display: "inline-flex", alignItems: "center", gap: 8, background: LOGO_BLUE, color: "#1f2937", fontWeight: 800, fontSize: "1rem", padding: "0.85rem 1.75rem", borderRadius: 999, textDecoration: "none", boxShadow: "0 4px 12px rgba(155, 204, 245, 0.4)" }}>
             Start Matching Free →
           </a>

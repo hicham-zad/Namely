@@ -11,7 +11,7 @@
  */
 
 import { createClient } from "@supabase/supabase-js";
-import { readFileSync, existsSync, readdirSync } from "fs";
+import { readFileSync, existsSync, readdirSync, mkdirSync, copyFileSync } from "fs";
 import { join, basename } from "path";
 import { marked } from "marked";
 import { config } from "dotenv";
@@ -78,33 +78,19 @@ for (const file of files) {
 
   console.log(`── ${slug}`);
 
-  // 1. Upload image to Supabase Storage
+  // 1. Image URL (Use local public folder)
   let featured_image_url = null;
   if (existsSync(imgPath)) {
-    const buffer = readFileSync(imgPath);
-
-    // Check if already uploaded
-    const { data: listed } = await supabase.storage
-      .from(BUCKET)
-      .list("", { search: `${slug}.webp` });
-
-    if (listed && listed.some((f) => f.name === `${slug}.webp`)) {
-      const { data } = supabase.storage.from(BUCKET).getPublicUrl(`${slug}.webp`);
-      featured_image_url = data.publicUrl;
-      console.log(`  ⏭  Image already uploaded`);
-    } else {
-      const { error: uploadErr } = await supabase.storage
-        .from(BUCKET)
-        .upload(`${slug}.webp`, buffer, { contentType: "image/webp", upsert: true });
-
-      if (uploadErr) {
-        console.warn(`  ⚠️  Image upload warning: ${uploadErr.message}`);
-      }
-
-      const { data } = supabase.storage.from(BUCKET).getPublicUrl(`${slug}.webp`);
-      featured_image_url = data.publicUrl;
-      console.log(`  📸 Image → ${featured_image_url}`);
+    featured_image_url = `/blog-images/${slug}.webp`;
+    
+    // Copy the image to the public directory
+    const destPath = join(__dirname, "../../namely-web/public", featured_image_url);
+    if (!existsSync(dirname(destPath))) {
+      mkdirSync(dirname(destPath), { recursive: true });
     }
+    copyFileSync(imgPath, destPath);
+    
+    console.log(`  📸 Image → ${featured_image_url} (Copied to Local)`);
   } else {
     console.log(`  ⚠️  No image found at ${imgPath}`);
   }
