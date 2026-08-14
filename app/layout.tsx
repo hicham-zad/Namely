@@ -18,11 +18,25 @@ export const metadata: Metadata = {
 };
 
 import { ThemeProvider } from "@/components/ThemeProvider";
+import Script from "next/script";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${outfit.variable}`} suppressHydrationWarning data-scroll-behavior="smooth">
       <body>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-N19GVSRK35"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-N19GVSRK35');
+          `}
+        </Script>
         <ThemeProvider attribute="data-theme" defaultTheme="light" enableSystem>
           {children}
         </ThemeProvider>
