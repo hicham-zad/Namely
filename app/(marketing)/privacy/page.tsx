@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "How Namely collects, uses, and protects your personal data. Covers RevenueCat, Stripe, Supabase, data retention, and your rights.",
   alternates: { canonical: "https://matchbabynames.com/privacy" },
-  openGraph: { title: "Privacy Policy | Namely", url: "https://matchbabynames.com/privacy" },
+  openGraph: { title: "Privacy Policy | Namely", url: "https://matchbabynames.com/privacy", images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Namely — The AI Baby Name Matcher for Couples" }] },
 };
 
 const breadcrumb: WithContext<BreadcrumbList> = {

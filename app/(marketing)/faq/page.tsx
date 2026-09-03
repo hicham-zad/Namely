@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "FAQ — Frequently Asked Questions",
   description: "Answers to common questions about Namely: how the AI baby name matcher works, pricing, partner sync, cancellation, privacy, and account deletion.",
   alternates: { canonical: "https://matchbabynames.com/faq" },
-  openGraph: { title: "FAQ | Namely", url: "https://matchbabynames.com/faq" },
+  openGraph: { title: "FAQ | Namely", url: "https://matchbabynames.com/faq", images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Namely — The AI Baby Name Matcher for Couples" }] },
 };
 
 const breadcrumb: WithContext<BreadcrumbList> = {

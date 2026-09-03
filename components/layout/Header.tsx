@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Apple, Globe } from "lucide-react";
 
 export default function Header() {
   return (
@@ -10,42 +9,71 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" aria-label="Namely home" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
           <div style={{ width: 36, height: 36, position: "relative", flexShrink: 0 }}>
-            <Image src="/logo.png" alt="Namely" fill style={{ objectFit: "contain", borderRadius: 10 }} priority />
+            <Image src="/logo.png" alt="Namely" fill sizes="36px" style={{ objectFit: "contain", borderRadius: 10 }} priority />
           </div>
           <span style={{ fontFamily: "var(--font-outfit)", fontWeight: 800, fontSize: "1.2rem", color: "var(--text)", letterSpacing: "-0.02em" }}>
             Namely
           </span>
         </Link>
 
-        {/* Navigation */}
-        <nav style={{ flex: 1, display: "flex", justifyContent: "flex-end", paddingRight: "1.5rem" }}>
+        {/* Navigation & Actions */}
+        <nav aria-label="Main navigation" style={{ display: "flex", alignItems: "center", gap: "1.5rem" }}>
           <Link 
             href="/blog" 
-            className="nav-link"
+            className="header-nav-link"
             style={{ 
               color: "var(--text2)", 
               fontWeight: 600, 
               fontSize: "0.95rem", 
               textDecoration: "none",
-              transition: "color 0.2s"
+              transition: "color 0.15s ease"
             }}
           >
             Blog
           </Link>
-        </nav>
-
-        {/* CTAs */}
-        <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-          <Link href="/login" style={{ display: "inline-flex", alignItems: "center", gap: 6, color: "var(--text2)", fontWeight: 600, fontSize: "0.95rem", textDecoration: "none" }}>
-            <Globe size={16} /> Start Matching
+          <Link 
+            href="/login" 
+            className="header-nav-link"
+            style={{ 
+              color: "var(--text2)", 
+              fontWeight: 600, 
+              fontSize: "0.95rem", 
+              textDecoration: "none",
+              transition: "color 0.15s ease"
+            }}
+          >
+            Start Matching
           </Link>
-          <a href="https://apps.apple.com/us/app/namely-baby-name-matcher/id6786483368" target="_blank" rel="noopener noreferrer" id="header-cta-btn"
-            style={{ display: "none", alignItems: "center", gap: 6, background: "#1f2937", color: "#fff", fontWeight: 700, fontSize: "0.875rem", padding: "0.55rem 1.25rem", borderRadius: 999, textDecoration: "none" }}>
-            <Apple size={16} fill="currentColor" /> Get the App
+          <a 
+            href="https://apps.apple.com/us/app/namely-baby-name-matcher/id6786483368" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            id="header-cta-btn"
+            style={{ 
+              display: "none", 
+              alignItems: "center", 
+              background: "#1f2937", 
+              color: "#fff", 
+              fontWeight: 700, 
+              fontSize: "0.875rem", 
+              padding: "0.55rem 1.25rem", 
+              borderRadius: 999, 
+              textDecoration: "none",
+              transition: "opacity 0.15s ease, transform 0.15s ease"
+            }}
+          >
+            Get the App
           </a>
-        </div>
+        </nav>
       </div>
       <style>{`
+        .header-nav-link:hover {
+          color: var(--text) !important;
+        }
+        #header-cta-btn:hover {
+          opacity: 0.9;
+          transform: translateY(-1px);
+        }
         @media (min-width: 640px) {
           #header-cta-btn { display: inline-flex !important; }
         }
@@ -53,3 +81,4 @@ export default function Header() {
     </header>
   );
 }
+

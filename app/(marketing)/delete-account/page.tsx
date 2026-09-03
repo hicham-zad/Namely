@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Delete Your Account",
   description: "How to delete your Namely account and all associated data. Step-by-step instructions for in-app deletion and web-based deletion requests.",
   alternates: { canonical: "https://matchbabynames.com/delete-account" },
-  openGraph: { title: "Delete Account | Namely", url: "https://matchbabynames.com/delete-account" },
+  openGraph: { title: "Delete Account | Namely", url: "https://matchbabynames.com/delete-account", images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Namely — The AI Baby Name Matcher for Couples" }] },
 };
 
 const breadcrumb: WithContext<BreadcrumbList> = {

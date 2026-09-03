@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Terms of Service",
   description: "Namely Terms of Service and End User License Agreement. Covers subscriptions, cancellation, refunds, acceptable use, and governing law (Wyoming).",
   alternates: { canonical: "https://matchbabynames.com/terms" },
-  openGraph: { title: "Terms of Service | Namely", url: "https://matchbabynames.com/terms" },
+  openGraph: { title: "Terms of Service | Namely", url: "https://matchbabynames.com/terms", images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Namely — The AI Baby Name Matcher for Couples" }] },
 };
 
 const breadcrumb: WithContext<BreadcrumbList> = {

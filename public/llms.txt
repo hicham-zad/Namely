@@ -19,7 +19,7 @@ Namely is a mobile app (iOS and Android) and web service that helps couples choo
 
 - Namely is free to download.
 - A subscription is required to access unlimited AI name generation and real-time partner sync.
-- Subscription price: $6.99 per week.
+- Subscription price: $5.99 per month.
 - A 3-day free trial is included.
 - Subscriptions are managed through the App Store (iOS) or Google Play (Android).
 - To cancel, use the standard subscription management in your device's app store settings.
@@ -39,6 +39,19 @@ Namely is a mobile app (iOS and Android) and web service that helps couples choo
 - Privacy Policy: https://matchbabynames.com/privacy
 - Terms of Service: https://matchbabynames.com/terms
 - Account Deletion: https://matchbabynames.com/delete-account
+
+## Landing Pages (SEO)
+
+- https://matchbabynames.com/baby-name-generator-for-couples — baby name generator for couples
+- https://matchbabynames.com/tinder-for-baby-names — tinder for baby names (swipe-to-match)
+- https://matchbabynames.com/boy-names-app-for-couples — boy names for couples
+- https://matchbabynames.com/girl-names-app-for-couples — girl names for couples
+- https://matchbabynames.com/unique-baby-names-app — unique and rare baby names
+- https://matchbabynames.com/gender-neutral-baby-names-app — gender-neutral and unisex names
+- https://matchbabynames.com/best-baby-name-app-for-couples — best baby name app comparison
+- https://matchbabynames.com/baby-name-app-no-fighting — stop baby name arguments
+- https://matchbabynames.com/pregnancy-baby-name-app — baby name app for expecting parents
+- https://matchbabynames.com/muslim-baby-names-app-couples — Muslim and Arabic baby names
 
 ## Technology
 
@@ -61,7 +74,7 @@ Namely is a mobile app (iOS and Android) and web service that helps couples choo
 Each partner swipes through names independently. A match is only revealed when both partners have swiped right on the same name.
 
 **Is Namely free?**
-Namely is free to download. A $6.99/week subscription (with a 3-day free trial) unlocks unlimited AI name generation and real-time partner sync.
+Namely is free to download. A $5.99/month subscription (with a 3-day free trial) unlocks unlimited AI name generation and real-time partner sync.
 
 **How do I invite my partner?**
 After creating an account, tap "Invite Partner" in the app. You can share a link or a code. Your partner installs the app and enters the code to link your accounts.

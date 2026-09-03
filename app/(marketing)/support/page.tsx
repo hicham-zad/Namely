@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Support",
   description: "Get help with Namely. Contact our support team, find answers to common questions, and access privacy and account deletion resources.",
   alternates: { canonical: "https://matchbabynames.com/support" },
-  openGraph: { title: "Support | Namely", url: "https://matchbabynames.com/support" },
+  openGraph: { title: "Support | Namely", url: "https://matchbabynames.com/support", images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Namely — The AI Baby Name Matcher for Couples" }] },
 };
 
 const breadcrumb: WithContext<BreadcrumbList> = {

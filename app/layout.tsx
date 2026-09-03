@@ -8,7 +8,7 @@ const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit", display: 
 export const metadata: Metadata = {
   metadataBase: new URL("https://matchbabynames.com"),
   title: { default: "Namely — AI Baby Name Matcher for Couples", template: "%s | Namely" },
-  description: "Namely helps couples find the perfect baby name together. Swipe through AI-generated names, sync with your partner in real time, and celebrate when you match.",
+  description: "Namely helps couples find the perfect baby name together. Swipe through AI-generated names, sync with your partner, and celebrate when you match.",
   keywords: ["baby names", "baby name generator", "ai baby names", "couple baby names", "swipe baby names", "baby name matcher", "tinder for baby names", "name together"],
   authors: [{ name: "Namely LLC" }],
   publisher: "Namely LLC",

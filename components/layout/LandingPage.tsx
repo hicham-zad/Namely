@@ -1,40 +1,64 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Sparkles, HeartHandshake, Zap, SlidersHorizontal, Heart, BadgeDollarSign, Link as LinkIcon, Hand, PartyPopper, Lock, Smartphone, Star, Baby, Apple } from "lucide-react";
 import JsonLd from "@/components/layout/JsonLd";
-import type { Organization, SoftwareApplication, WithContext } from "schema-dts";
-
-export const metadata: Metadata = {
-  title: { absolute: "Namely — AI Baby Name Matcher for Couples" },
-  description: "Namely helps couples find the perfect baby name together. Swipe through AI-generated names, sync with your partner, and celebrate when you match.",
-  alternates: { canonical: "/" },
-  openGraph: { title: "Namely — AI Baby Name Matcher for Couples", description: "Find the perfect baby name together.", url: "https://matchbabynames.com", type: "website", images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Namely — The AI Baby Name Matcher for Couples" }] },
-};
-
-const orgSchema: WithContext<Organization> = {
-  "@context": "https://schema.org", "@type": "Organization",
-  name: "Namely", url: "https://matchbabynames.com", logo: "https://matchbabynames.com/logo.png",
-  contactPoint: { "@type": "ContactPoint", email: "support@matchbabynames.com", contactType: "customer support" },
-};
-const appSchema: WithContext<SoftwareApplication> = {
-  "@context": "https://schema.org", "@type": "SoftwareApplication",
-  name: "Namely — Baby Name Matcher", operatingSystem: "iOS, Android", applicationCategory: "LifestyleApplication",
-  offers: { "@type": "Offer", price: "5.99", priceCurrency: "USD", description: "Free to download. $5.99/month with 3-day free trial." },
-  aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", ratingCount: "120" },
-  description: "Namely helps couples choose a baby name together using AI-powered suggestions and a swipe-to-match mechanic.",
-  url: "https://matchbabynames.com", downloadUrl: "https://apps.apple.com/us/app/namely-baby-name-matcher/id6786483368",
-};
+import type { SoftwareApplication, WithContext } from "schema-dts";
 
 const LOGO_PINK = "#fb9cb0";
 const LOGO_BLUE = "#9bccf5";
 const TEXT_DARK = "#1f2937";
 
+export interface LandingPageFaq {
+  q: string;
+  a: string;
+}
+
+export interface LandingPageConfig {
+  /** Canonical slug, e.g. "/tinder-for-baby-names" */
+  slug: string;
+  /** Hero H1 */
+  h1: string;
+  /** Hero intro paragraph (~80 words) */
+  heroParagraph: string;
+  /** Trust badge text below the pill (optional) */
+  badgeText?: string;
+  /** CTA section heading */
+  ctaHeading: string;
+  /** CTA section subtext */
+  ctaSubtext: string;
+  /** 5 screenshot alt texts (same images, different keyword-scoped descriptions) */
+  screenshotAlts: [string, string, string, string, string];
+  /** 3 FAQ items */
+  faqItems: [LandingPageFaq, LandingPageFaq, LandingPageFaq];
+}
+
+const SITE_URL = "https://matchbabynames.com";
+
+const features = [
+  { icon: <Sparkles size={28} color={LOGO_PINK} />, title: "AI Name Generator", desc: "Get personalised suggestions based on your style, gender preference, origins, and meaning themes." },
+  { icon: <HeartHandshake size={28} color={LOGO_BLUE} />, title: "Swipe to Match", desc: "Both partners vote independently. A match is revealed only when you both like the same name." },
+  { icon: <Zap size={28} color={LOGO_PINK} />, title: "Real-Time Sync", desc: "Swipes sync instantly. Names your partner rejects won't appear in your queue." },
+  { icon: <SlidersHorizontal size={28} color={LOGO_BLUE} />, title: "Deep Customisation", desc: "Filter by gender, style, origin, country, name length, starting letter, and names to avoid." },
+  { icon: <Heart size={28} color={LOGO_PINK} />, title: "Likes & Matches", desc: "All your liked names and shared matches are saved in one searchable, sortable list." },
+  { icon: <BadgeDollarSign size={28} color={LOGO_BLUE} />, title: "Transparent Pricing", desc: "$5.99/month, 3-day free trial. Cancel anytime via App Store or Google Play — no hassle." },
+];
+
+const SCREENSHOTS = [
+  "/screenshot-1.png",
+  "/screenshot-2.png",
+  "/screenshot-3.png",
+  "/screenshot-4.png",
+  "/screenshot-5.png",
+] as const;
+
 function AppStoreBadge({ id }: { id: string }) {
   return (
-    <a href="https://apps.apple.com/us/app/namely-baby-name-matcher/id6786483368" target="_blank" rel="noopener noreferrer" id={id}
+    <a
+      href="https://apps.apple.com/us/app/namely-baby-name-matcher/id6786483368"
+      target="_blank" rel="noopener noreferrer" id={id}
       aria-label="Download Namely on the App Store"
-      style={{ display: "inline-flex", alignItems: "center", gap: 8, background: TEXT_DARK, color: "#fff", fontWeight: 700, fontSize: "0.875rem", padding: "0.65rem 1.25rem", borderRadius: 14, textDecoration: "none" }}>
+      style={{ display: "inline-flex", alignItems: "center", gap: 8, background: TEXT_DARK, color: "#fff", fontWeight: 700, fontSize: "0.875rem", padding: "0.65rem 1.25rem", borderRadius: 14, textDecoration: "none" }}
+    >
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
       </svg>
@@ -45,9 +69,12 @@ function AppStoreBadge({ id }: { id: string }) {
 
 function PlayStoreBadge({ id }: { id: string }) {
   return (
-    <a href="https://play.google.com/store/apps/namely" target="_blank" rel="noopener noreferrer" id={id}
+    <a
+      href="https://play.google.com/store/apps/namely"
+      target="_blank" rel="noopener noreferrer" id={id}
       aria-label="Get Namely on Google Play"
-      style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#fff", color: TEXT_DARK, fontWeight: 700, fontSize: "0.875rem", padding: "0.65rem 1.25rem", borderRadius: 14, textDecoration: "none", border: "1.5px solid #e5e7eb" }}>
+      style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#fff", color: TEXT_DARK, fontWeight: 700, fontSize: "0.875rem", padding: "0.65rem 1.25rem", borderRadius: 14, textDecoration: "none", border: "1.5px solid #e5e7eb" }}
+    >
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path d="M3.18 23.76c.37.2.8.2 1.18 0l10.91-6.3-2.35-2.35L3.18 23.76z" fill="#EA4335" />
         <path d="M22.01 10.13L19.1 8.44l-2.63 2.63 2.63 2.63 2.94-1.7c.84-.49.84-1.38-.03-1.87z" fill="#FBBC04" />
@@ -59,56 +86,52 @@ function PlayStoreBadge({ id }: { id: string }) {
   );
 }
 
-const features = [
-  { icon: <Sparkles size={28} color={LOGO_PINK} />, title: "AI Name Generator", desc: "Get personalised suggestions based on your style, gender preference, origins, and meaning themes." },
-  { icon: <HeartHandshake size={28} color={LOGO_BLUE} />, title: "Swipe to Match", desc: "Both partners vote independently. A match is revealed only when you both like the same name." },
-  { icon: <Zap size={28} color={LOGO_PINK} />, title: "Real-Time Sync", desc: "Swipes sync instantly. Names your partner rejects won't appear in your queue." },
-  { icon: <SlidersHorizontal size={28} color={LOGO_BLUE} />, title: "Deep Customisation", desc: "Filter by gender, style, origin, country, name length, starting letter, and names to avoid." },
-  { icon: <Heart size={28} color={LOGO_PINK} />, title: "Likes & Matches", desc: "All your liked names and shared matches are saved in one searchable, sortable list." },
-  { icon: <BadgeDollarSign size={28} color={LOGO_BLUE} />, title: "Transparent Pricing", desc: "$5.99/month, 3-day free trial. Cancel anytime via App Store or Google Play — no hassle." },
-];
+// Exported for completeness but currently unused — kept for future use
+export { AppStoreBadge, PlayStoreBadge };
 
-const screenshots = [
-  { src: "/screenshot-1.png", alt: "Namely — Discover screen showing name card for Gideon with like and skip buttons" },
-  { src: "/screenshot-2.png", alt: "Namely — My Likes screen listing names the user has saved" },
-  { src: "/screenshot-3.png", alt: "Namely — Matches screen showing names both partners liked" },
-  { src: "/screenshot-4.png", alt: "Namely — Preferences screen to customise name style, gender, and origins" },
-  { src: "/screenshot-5.png", alt: "Namely — Partner linking screen with 6-letter invite code" },
-];
+export default function LandingPage({ config }: { config: LandingPageConfig }) {
+  const canonicalUrl = `${SITE_URL}${config.slug}`;
 
-const faqPreview = [
-  { q: "Is Namely free?", a: "Namely is free to download. A $5.99/month subscription (with a 3-day free trial) unlocks unlimited AI name generation and real-time partner sync." },
-  { q: "How does the matching work?", a: "Each partner swipes through names independently. A match appears only when you've both liked the same name — no peeking at each other's votes." },
-  { q: "Do we both need the app?", a: "Yes. Both partners install Namely and link accounts with a shared 6-letter code. Works across iOS and Android." },
-];
+  const appSchema: WithContext<SoftwareApplication> = {
+    "@context": "https://schema.org", "@type": "SoftwareApplication",
+    name: "Namely — Baby Name Matcher", operatingSystem: "iOS, Android", applicationCategory: "LifestyleApplication",
+    offers: { "@type": "Offer", price: "5.99", priceCurrency: "USD", description: "Free to download. $5.99/month with 3-day free trial." },
+    aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", ratingCount: "120" },
+    description: "Namely helps couples choose a baby name together using AI-powered suggestions and a swipe-to-match mechanic.",
+    url: canonicalUrl,
+    downloadUrl: "https://apps.apple.com/us/app/namely-baby-name-matcher/id6786483368",
+  };
 
-export default function HomePage() {
   return (
     <div data-theme="light">
-      <JsonLd data={orgSchema} />
       <JsonLd data={appSchema} />
 
       {/* ── HERO ── */}
       <section id="hero" style={{ background: "linear-gradient(180deg, #f8fafc 0%, #fff 100%)", padding: "4rem 1.5rem 2rem", overflow: "hidden", position: "relative" }}>
         <div style={{ maxWidth: 1152, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr", gap: "2rem", alignItems: "center" }}>
-          
+
           {/* Text */}
           <div style={{ maxWidth: 560 }}>
-            <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "#fff", border: `1.5px solid #f1f5f9`, borderRadius: 999, padding: "0.3rem 0.85rem", marginBottom: "1.5rem" }}>
-              <span style={{ color: LOGO_PINK, fontSize: "0.75rem", fontWeight: 700 }}>✓ Free 3-day trial · No credit card needed</span>
+            <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "#fff", border: "1.5px solid #f1f5f9", borderRadius: 999, padding: "0.3rem 0.85rem", marginBottom: "1.5rem" }}>
+              <span style={{ color: LOGO_PINK, fontSize: "0.75rem", fontWeight: 700 }}>
+                {config.badgeText ?? "✓ Free 3-day trial · No credit card needed"}
+              </span>
             </div>
 
             <h1 style={{ fontFamily: "var(--font-outfit)", fontSize: "clamp(2.25rem, 5vw, 3.25rem)", fontWeight: 900, color: TEXT_DARK, lineHeight: 1.15, marginBottom: "1.25rem", letterSpacing: "-0.02em" }}>
-              Match Baby Names With Your Partner
+              {config.h1}
             </h1>
 
             <p style={{ fontSize: "1.1rem", color: "#4b5563", lineHeight: 1.7, marginBottom: "2rem", maxWidth: 520 }}>
-              Namely is the AI baby name matcher for couples — swipe together, get instant matches, and skip the argument. No repeated names, no confusing paywalls, just names you'll both actually love.
+              {config.heroParagraph}
             </p>
 
             <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem", marginBottom: "1.5rem" }}>
-              <a href="https://apps.apple.com/us/app/namely-baby-name-matcher/id6786483368" target="_blank" rel="noopener noreferrer" id="hero-main-cta"
-                style={{ display: "inline-flex", alignItems: "center", gap: 8, background: LOGO_BLUE, color: TEXT_DARK, fontWeight: 800, fontSize: "1rem", padding: "0.85rem 1.75rem", borderRadius: 999, textDecoration: "none", boxShadow: "0 4px 12px rgba(155, 204, 245, 0.4)" }}>
+              <a
+                href="https://apps.apple.com/us/app/namely-baby-name-matcher/id6786483368"
+                target="_blank" rel="noopener noreferrer" id="hero-main-cta"
+                style={{ display: "inline-flex", alignItems: "center", gap: 8, background: LOGO_BLUE, color: TEXT_DARK, fontWeight: 800, fontSize: "1rem", padding: "0.85rem 1.75rem", borderRadius: 999, textDecoration: "none", boxShadow: "0 4px 12px rgba(155, 204, 245, 0.4)" }}
+              >
                 <Apple size={20} fill="currentColor" /> Get the App Free
               </a>
               <Link href="/login" id="hero-web-cta"
@@ -122,15 +145,15 @@ export default function HomePage() {
           <div className="hero-screenshots-container" style={{ position: "relative", display: "flex", justifyContent: "center", alignSelf: "center", paddingTop: "1rem", paddingBottom: "1rem" }}>
             {/* Background left */}
             <div className="hero-bg-shot" style={{ position: "absolute", top: "50%", left: "50%", width: 180, transform: "translate(-115%, -45%) rotate(-12deg)", zIndex: 1, filter: "drop-shadow(0 10px 20px rgba(0,0,0,0.05))" }}>
-              <Image src="/screenshot-2.png" alt="Namely App Likes" width={1242} height={2688} sizes="(max-width: 640px) 0vw, 180px" style={{ width: "100%", height: "auto", borderRadius: 20, display: "block" }} priority />
+              <Image src="/screenshot-2.png" alt={config.screenshotAlts[1]} width={1242} height={2688} sizes="(max-width: 640px) 0vw, 180px" style={{ width: "100%", height: "auto", borderRadius: 20, display: "block" }} priority />
             </div>
             {/* Background right */}
             <div className="hero-bg-shot" style={{ position: "absolute", top: "50%", left: "50%", width: 180, transform: "translate(15%, -45%) rotate(12deg)", zIndex: 1, filter: "drop-shadow(0 10px 20px rgba(0,0,0,0.05))" }}>
-              <Image src="/screenshot-5.png" alt="Namely App Partner" width={1242} height={2688} sizes="(max-width: 640px) 0vw, 180px" style={{ width: "100%", height: "auto", borderRadius: 20, display: "block" }} priority />
+              <Image src="/screenshot-5.png" alt={config.screenshotAlts[4]} width={1242} height={2688} sizes="(max-width: 640px) 0vw, 180px" style={{ width: "100%", height: "auto", borderRadius: 20, display: "block" }} priority />
             </div>
             {/* Main foreground screenshot */}
             <div style={{ position: "relative", width: 230, zIndex: 10, filter: "drop-shadow(0 15px 30px rgba(155, 204, 245, 0.2))" }}>
-              <Image src="/screenshot-1.png" alt="Namely app showing the name swipe screen" width={1242} height={2688} sizes="230px" style={{ width: "100%", height: "auto", borderRadius: 26, display: "block", border: "2px solid #fff" }} priority />
+              <Image src="/screenshot-1.png" alt={config.screenshotAlts[0]} width={1242} height={2688} sizes="230px" style={{ width: "100%", height: "auto", borderRadius: 26, display: "block", border: "2px solid #fff" }} priority />
             </div>
           </div>
         </div>
@@ -153,7 +176,7 @@ export default function HomePage() {
             { icon: <HeartHandshake size={16} color={LOGO_BLUE} />, text: "Built for couples" },
             { icon: <Lock size={16} color={LOGO_PINK} />, text: "Private & secure" },
             { icon: <Smartphone size={16} color={LOGO_BLUE} />, text: "iOS & Android" },
-            { icon: <Star size={16} color="#fbbf24" fill="#fbbf24" />, text: "4.8 rating" }
+            { icon: <Star size={16} color="#fbbf24" fill="#fbbf24" />, text: "4.8 rating" },
           ].map(t => (
             <span key={t.text} style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.85rem", color: "#6b7280", fontWeight: 500 }}>
               {t.icon} {t.text}
@@ -203,9 +226,15 @@ export default function HomePage() {
             <p style={{ color: "#6b7280", fontSize: "1rem" }}>Beautifully simple. Built for the moments that matter.</p>
           </div>
           <div className="screenshots-row" style={{ display: "flex", gap: "1rem", overflowX: "auto", paddingBottom: "1rem", scrollSnapType: "x mandatory", WebkitOverflowScrolling: "touch" }}>
-            {screenshots.map((s, i) => (
+            {SCREENSHOTS.map((src, i) => (
               <div key={i} style={{ flexShrink: 0, width: 160, scrollSnapAlign: "center", filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.06))" }}>
-                <Image src={s.src} alt={s.alt} width={1242} height={2688} sizes="160px" style={{ width: "160px", height: "auto", borderRadius: 18, display: "block" }} loading={i === 0 ? "eager" : "lazy"} />
+                <Image
+                  src={src}
+                  alt={config.screenshotAlts[i]}
+                  width={1242} height={2688} sizes="160px"
+                  style={{ width: "160px", height: "auto", borderRadius: 18, display: "block" }}
+                  loading={i === 0 ? "eager" : "lazy"}
+                />
               </div>
             ))}
           </div>
@@ -249,7 +278,7 @@ export default function HomePage() {
             <h2 style={{ fontFamily: "var(--font-outfit)", fontSize: "clamp(1.5rem, 3vw, 2rem)", fontWeight: 800, color: TEXT_DARK, marginBottom: "0.5rem" }}>Common questions</h2>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem" }}>
-            {faqPreview.map(item => (
+            {config.faqItems.map(item => (
               <details key={item.q} style={{ background: "#fff", border: "1px solid #f1f5f9", borderRadius: 12, overflow: "hidden" }}>
                 <summary style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "1rem 1.1rem", fontWeight: 700, color: TEXT_DARK, fontSize: "0.9rem", cursor: "pointer" }}>
                   {item.q}
@@ -274,14 +303,17 @@ export default function HomePage() {
             <Baby size={48} color={LOGO_BLUE} />
           </div>
           <h2 style={{ fontFamily: "var(--font-outfit)", fontSize: "clamp(1.5rem, 3vw, 1.75rem)", fontWeight: 800, marginBottom: "0.5rem", color: TEXT_DARK }}>
-            Ready to find your favourite name?
+            {config.ctaHeading}
           </h2>
           <p style={{ color: "#6b7280", fontSize: "0.95rem", marginBottom: "1.5rem" }}>
-            Download Namely free. Start your 3-day trial and invite your partner today.
+            {config.ctaSubtext}
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "0.75rem" }}>
-            <a href="https://apps.apple.com/us/app/namely-baby-name-matcher/id6786483368" target="_blank" rel="noopener noreferrer" id="cta-main-btn"
-              style={{ display: "inline-flex", alignItems: "center", gap: 8, background: LOGO_BLUE, color: TEXT_DARK, fontWeight: 800, fontSize: "1rem", padding: "0.85rem 1.75rem", borderRadius: 999, textDecoration: "none", boxShadow: "0 4px 12px rgba(155, 204, 245, 0.4)" }}>
+            <a
+              href="https://apps.apple.com/us/app/namely-baby-name-matcher/id6786483368"
+              target="_blank" rel="noopener noreferrer" id="cta-main-btn"
+              style={{ display: "inline-flex", alignItems: "center", gap: 8, background: LOGO_BLUE, color: TEXT_DARK, fontWeight: 800, fontSize: "1rem", padding: "0.85rem 1.75rem", borderRadius: 999, textDecoration: "none", boxShadow: "0 4px 12px rgba(155, 204, 245, 0.4)" }}
+            >
               <Apple size={20} fill="currentColor" /> Get the App Free
             </a>
             <Link href="/login" id="cta-web-btn"

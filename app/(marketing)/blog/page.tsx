@@ -37,6 +37,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: "Baby Name Blog | Namely",
       url: "https://matchbabynames.com/blog",
       type: "website",
+      images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Namely — The AI Baby Name Matcher for Couples" }],
     },
   };
 }
