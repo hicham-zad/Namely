@@ -45,6 +45,8 @@ export interface GeneratedNameContent {
   faqs: FaqEntry[];
   meta_title: string;
   meta_description: string;
+  pronunciation_ipa: string;
+  pronunciation_text: string;
 }
 
 export interface QAResult {
@@ -81,7 +83,9 @@ Return ONLY a valid JSON object with exactly these keys — no markdown, no code
     {"question": "What is the origin of the name ${n.name}?", "answer": "Complete sentence covering etymology."}
   ],
   "meta_title": "Exactly: ${n.name} Name Meaning, Origin & Popularity | Namely — must be ≤60 characters",
-  "meta_description": "A compelling 1-2 sentence summary for Google SERPs. Must mention meaning, origin, and popularity. ≤160 characters."
+  "meta_description": "A compelling 1-2 sentence summary for Google SERPs. Must mention meaning, origin, and popularity. ≤160 characters.",
+  "pronunciation_ipa": "IPA notation for the name",
+  "pronunciation_text": "Phonetic spelling (e.g., AY-vuh)"
 }
 
 Rules:
@@ -158,8 +162,8 @@ export function runQAChecks(
     ["personality_note", ai.personality_note],
     ["meta_title", ai.meta_title],
     ["meta_description", ai.meta_description],
-    ["pronunciation_ipa", n.pronunciation_ipa],
-    ["pronunciation_text", n.pronunciation_text],
+    ["pronunciation_ipa", ai.pronunciation_ipa],
+    ["pronunciation_text", ai.pronunciation_text],
   ];
   for (const [field, val] of required) {
     if (!val || val.trim().length === 0) {
