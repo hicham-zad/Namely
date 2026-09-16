@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 const EXPLORE_LINKS = [
+  { href: "/names", label: "Baby Name Directory" },
   { href: "/baby-name-generator-for-couples", label: "Baby Name Generator for Couples" },
   { href: "/tinder-for-baby-names", label: "Tinder for Baby Names" },
   { href: "/boy-names-app-for-couples", label: "Boy Names App for Couples" },
