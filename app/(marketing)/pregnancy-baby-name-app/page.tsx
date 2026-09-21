@@ -21,7 +21,7 @@ const config: LandingPageConfig = {
     "Whether you're 8 weeks in and starting early, or 38 weeks in and running out of time, Namely works at every stage of pregnancy. Start with a wide-open queue and narrow down as you go — or jump straight to your shortlist in the final trimester. The AI generates names based on both partners' tastes, you each swipe in private, and a match is revealed the moment you both love the same one. No scrambling at the hospital required.",
   badgeText: "✓ Start any trimester · Match before the due date",
   ctaHeading: "Pick a name before the big day.",
-  ctaSubtext: "Download free. Whether you're weeks away or days away — Namely gets you there.",
+  ctaSubtext: "Download Namely. Whether you're weeks away or days away — Namely gets you there.",
   screenshotAlts: [
     "Namely app swipe screen — helping expecting parents choose a baby name during pregnancy",
     "Namely app Likes screen — an expecting parent's shortlist of baby names",

@@ -185,7 +185,7 @@ export default async function BlogPostPage({
               id="blog-sidebar-cta"
               style={{ display: "inline-flex", alignItems: "center", gap: 6, background: LOGO_BLUE, color: "#1f2937", fontWeight: 800, fontSize: "0.85rem", padding: "0.65rem 1.25rem", borderRadius: 999, textDecoration: "none" }}
             >
-              Try Namely Free →
+              Try Namely →
             </a>
           </div>
 
@@ -221,11 +221,11 @@ export default async function BlogPostPage({
             Ready to find your perfect baby name?
           </h2>
           <p style={{ color: "var(--text2)", fontSize: "0.9rem", marginBottom: "1.25rem" }}>
-            Download Namely free. 3-day trial, no credit card needed.
+            Download Namely and invite your partner today.
           </p>
           <a href="https://apps.apple.com/us/app/namely-baby-name-matcher/id6786483368" target="_blank" rel="noopener noreferrer" id="blog-post-bottom-cta"
             style={{ display: "inline-flex", alignItems: "center", gap: 8, background: LOGO_BLUE, color: "#1f2937", fontWeight: 800, fontSize: "1rem", padding: "0.85rem 1.75rem", borderRadius: 999, textDecoration: "none", boxShadow: "0 4px 12px rgba(155, 204, 245, 0.4)" }}>
-            Start Matching Free →
+            Start Matching →
           </a>
         </div>
       </section>

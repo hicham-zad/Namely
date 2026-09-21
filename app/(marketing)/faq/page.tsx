@@ -71,11 +71,7 @@ const faqGroups = [
     items: [
       {
         q: "Is Namely free?",
-        a: "Namely is free to download. A $6.99/week subscription (with a 3-day free trial) is required to access unlimited AI name generation and real-time partner sync.",
-      },
-      {
-        q: "What does the free trial include?",
-        a: "The 3-day free trial includes full access to all paid features: unlimited AI name generation, real-time partner sync, and match notifications. No charge until the trial ends.",
+        a: "Namely is free to download. A $6.99/week subscription is required to access unlimited AI name generation and real-time partner sync.",
       },
       {
         q: "How do I cancel my subscription?",
@@ -83,7 +79,7 @@ const faqGroups = [
       },
       {
         q: "Will I lose access immediately when I cancel?",
-        a: "No. When you cancel, you keep full access to paid features until the end of your current billing period. After that, you revert to the free tier.",
+        a: "No. When you cancel, you keep full access to paid features until the end of your current billing period. After that, your access ends unless you resubscribe.",
       },
       {
         q: "How do I get a refund?",

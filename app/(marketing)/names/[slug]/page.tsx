@@ -561,7 +561,7 @@ export default async function NameDetailPage({
             <div className="name-sidebar-cta-emoji">💕</div>
             <h3 className="name-sidebar-cta-title">Love {name.name}?</h3>
             <p className="name-sidebar-cta-body">
-              See if your partner agrees. Swipe on names together in Namely — the free baby name
+              See if your partner agrees. Swipe on names together in Namely — the baby name
               matching app for couples.
             </p>
             <a
@@ -571,7 +571,7 @@ export default async function NameDetailPage({
               id="name-sidebar-app-cta"
               className="name-cta-btn"
             >
-              Try Namely Free →
+              Try Namely →
             </a>
           </div>
         </aside>
@@ -597,9 +597,9 @@ export default async function NameDetailPage({
               id="name-bottom-app-cta"
               className="name-cta-btn name-cta-btn--large"
             >
-              Start Matching Free
+              Start Matching
             </a>
-            <span className="name-cta-sub">Free · No credit card needed</span>
+            <span className="name-cta-sub">Cancel anytime</span>
           </div>
         </div>
       </section>

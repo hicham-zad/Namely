@@ -21,7 +21,7 @@ const breadcrumb: WithContext<BreadcrumbList> = {
 
 const faqItems = [
   { q: "How do I invite my partner?", a: "Open the Namely app and tap 'Invite Partner' on the home screen. You'll receive a short code or shareable link. Your partner downloads Namely, creates an account, and enters the code to link your sessions." },
-  { q: "Is Namely free?", a: "Namely is free to download. A $6.99/week subscription (with a 3-day free trial) unlocks unlimited AI name generation and real-time partner sync." },
+  { q: "Is Namely free?", a: "Namely is free to download. A $6.99/week subscription unlocks unlimited AI name generation and real-time partner sync." },
   { q: "How does the swipe-to-match work?", a: "Both partners swipe through names independently. A match notification appears only when both of you have liked the same name. There's no way for one partner to see what the other has swiped until a match occurs." },
   { q: "What happens when we match on a name?", a: "When both partners like the same name, Namely shows a 'It's a match!' screen with the matched name. The name is added to your shared matches list, which you can revisit at any time." },
   { q: "Can I use Namely without a partner?", a: "Yes. You can browse and swipe names solo. However, real-time matching requires both partners to have an account and be linked." },

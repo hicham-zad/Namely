@@ -21,7 +21,7 @@ const config: LandingPageConfig = {
     "If you've looked at the top-100 baby name lists and felt nothing, Namely is for you. Our AI digs past the Olivias and Liaams into names that are genuinely rare — rooted in history, mythology, literature, and culture — but still wearable for a modern child. Both partners swipe through uncommon suggestions independently, and a match is revealed only when you've both said yes to the same rare find.",
   badgeText: "✓ Beyond the top-100 · Rare names, real matches",
   ctaHeading: "Find a unique name neither of you has heard a thousand times.",
-  ctaSubtext: "Download free and let AI surface the rare names that deserve to be found.",
+  ctaSubtext: "Download Namely and let AI surface the rare names that deserve to be found.",
   screenshotAlts: [
     "Namely app swipe screen showing a rare and unique baby name suggestion",
     "Namely app Likes screen listing uncommon baby names the user has saved",
@@ -40,7 +40,7 @@ const config: LandingPageConfig = {
     },
     {
       q: "Is Namely free to use for finding unique names?",
-      a: "Namely is free to download. The $5.99/month subscription (with a 3-day free trial) unlocks unlimited AI-generated suggestions including the full rare name library and real-time partner sync.",
+      a: "Namely is free to download. The $6.99/week subscription unlocks unlimited AI-generated suggestions including the full rare name library and real-time partner sync.",
     },
   ],
 };

@@ -5,7 +5,7 @@
 
 ## What is Namely?
 
-Namely is a mobile app (iOS and Android) and web service that helps couples choose a baby name together. Both partners independently swipe through a curated and AI-generated list of baby names. When both partners swipe right (like) on the same name, it is flagged as a match. The app eliminates the awkward negotiation process by revealing matches only when both people agree.
+Namely is a mobile app (iOS and Android) that helps couples choose a baby name together. Both partners independently swipe through a curated and AI-generated list of baby names. When both partners swipe right (like) on the same name, it is flagged as a match. The app eliminates the awkward negotiation process by revealing matches only when both people agree.
 
 ## Core Features
 
@@ -13,7 +13,7 @@ Namely is a mobile app (iOS and Android) and web service that helps couples choo
 - **Swipe-to-match**: Each partner independently swipes through names. A match is revealed only when both partners like the same name.
 - **Real-time sync**: Both partners' swipes are synchronised in real time via Supabase. Names that one partner has already rejected are not shown again.
 - **No repeated names**: Once a name is swiped, it is removed from the queue permanently.
-- **Cross-platform**: Available on iOS (App Store), Android (Google Play), and via web at matchbabynames.com.
+- **Cross-platform**: Available on iOS (App Store) and Android (Google Play). matchbabynames.com is the app's landing page and content site.
 
 ## Pricing
 

@@ -20,7 +20,7 @@ const config: LandingPageConfig = {
   heroParagraph:
     "Finding a girl name you both adore is harder than it sounds — but Namely makes it actually fun. Filter your queue to girl names only, and let the AI surface suggestions based on your shared style: timeless classics like Eleanor and Clara, soft and modern names like Aria or Isla, or rare picks like Seraphina and Cordelia. Each partner swipes in private, and a match appears the moment you both fall for the same name.",
   ctaHeading: "Find a girl name you're both excited about.",
-  ctaSubtext: "Download free. Filter for girl names and start your first swipe session today.",
+  ctaSubtext: "Download Namely. Filter for girl names and start your first swipe session today.",
   screenshotAlts: [
     "Namely app swipe screen showing a girl name suggestion card",
     "Namely app Likes screen listing beautiful girl names you've saved",

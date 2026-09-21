@@ -8,7 +8,27 @@ import { NextResponse, type NextRequest } from "next/server";
 const PROTECTED_PATHS = ["/discover", "/likes", "/matches", "/settings", "/onboarding", "/upgrade"];
 const AUTH_PATHS = ["/login"];
 
+/**
+ * The web dashboard is switched off — matchbabynames.com is a landing page for the
+ * mobile app only. While false, every web-app route below redirects to "/" and no
+ * Supabase session work happens here. Flip to true to bring the dashboard back
+ * (see TODO.md for what to fix first).
+ */
+const WEB_DASHBOARD_ENABLED = false;
+const WEB_APP_PATHS = [...PROTECTED_PATHS, ...AUTH_PATHS, "/auth"];
+
 export async function proxy(request: NextRequest) {
+  if (!WEB_DASHBOARD_ENABLED) {
+    const { pathname } = request.nextUrl;
+    if (WEB_APP_PATHS.some((p) => pathname === p || pathname.startsWith(`${p}/`))) {
+      const url = request.nextUrl.clone();
+      url.pathname = "/";
+      url.search = "";
+      return NextResponse.redirect(url);
+    }
+    return NextResponse.next();
+  }
+
   let supabaseResponse = NextResponse.next({ request });
 
   const supabase = createServerClient(

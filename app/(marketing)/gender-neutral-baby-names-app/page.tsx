@@ -21,7 +21,7 @@ const config: LandingPageConfig = {
     "Set the gender filter to Neutral and Namely's AI queues up unisex names only — short modern picks like River, Remi, and Sage alongside longer classics like Morgan, Avery, and Quinn. Useful whether you're keeping the gender a surprise, want a name that isn't tied to expectations, or just prefer something that works either way. Both partners swipe in private and a match is revealed when you both land on the same one.",
   badgeText: "✓ Unisex names · No gender required",
   ctaHeading: "Find a gender-neutral name you're both excited to use.",
-  ctaSubtext: "Download free. Filter for unisex names and start matching with your partner.",
+  ctaSubtext: "Download Namely. Filter for unisex names and start matching with your partner.",
   screenshotAlts: [
     "Namely app swipe screen showing a gender-neutral baby name suggestion",
     "Namely app Likes screen with saved unisex baby names",

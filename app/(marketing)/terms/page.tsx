@@ -68,14 +68,9 @@ export default function TermsPage() {
 
         <h2>4. Subscription &amp; Billing</h2>
 
-        <h3>Free Trial</h3>
-        <p>
-          Namely offers a <strong>3-day free trial</strong> for new subscribers. Your free trial begins when you start your subscription. If you cancel before the trial ends, you will not be charged.
-        </p>
-
         <h3>Subscription Price</h3>
         <p>
-          After the free trial, the subscription is billed at <strong>$6.99 per week</strong> (or the equivalent price in your local currency as displayed in the App Store or Google Play at the time of purchase).
+          The subscription is billed at <strong>$6.99 per week</strong> (or the equivalent price in your local currency as displayed in the App Store or Google Play at the time of purchase).
         </p>
 
         <h3>Auto-Renewal</h3>

@@ -31,26 +31,13 @@ export default function Header() {
           >
             Blog
           </Link>
-          <Link 
-            href="/login" 
-            className="header-nav-link"
-            style={{ 
-              color: "var(--text2)", 
-              fontWeight: 600, 
-              fontSize: "0.95rem", 
-              textDecoration: "none",
-              transition: "color 0.15s ease"
-            }}
-          >
-            Start Matching
-          </Link>
           <a 
             href="https://apps.apple.com/us/app/namely-baby-name-matcher/id6786483368" 
             target="_blank" 
             rel="noopener noreferrer" 
             id="header-cta-btn"
             style={{ 
-              display: "none", 
+              display: "inline-flex", 
               alignItems: "center", 
               background: "#1f2937", 
               color: "#fff", 
@@ -73,9 +60,6 @@ export default function Header() {
         #header-cta-btn:hover {
           opacity: 0.9;
           transform: translateY(-1px);
-        }
-        @media (min-width: 640px) {
-          #header-cta-btn { display: inline-flex !important; }
         }
       `}</style>
     </header>

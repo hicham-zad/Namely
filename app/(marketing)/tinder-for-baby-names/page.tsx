@@ -21,7 +21,7 @@ const config: LandingPageConfig = {
     "Searching for a Tinder for baby names app to end the naming arguments? Namely uses the familiar swipe-to-match mechanic to make choosing a baby name fair and fun. Each partner links their account and swipes right to 'like' or left to 'pass' on AI-curated names. Because votes are completely hidden until you both swipe right on the same name, this baby name swipe app removes the pressure and negotiation from finding the perfect match.",
   badgeText: "✓ Swipe together · Match on names you both love",
   ctaHeading: "Ready to find your perfect match?",
-  ctaSubtext: "Download free and start swiping. Your baby name match is waiting.",
+  ctaSubtext: "Download Namely and start swiping. Your baby name match is waiting.",
   screenshotAlts: [
     "Namely app swipe screen — like or skip baby names Tinder-style",
     "Namely app Likes screen showing names you've swiped right on",

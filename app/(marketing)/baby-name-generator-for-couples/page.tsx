@@ -20,7 +20,7 @@ const config: LandingPageConfig = {
   heroParagraph:
     "A baby name generator built specifically for two. Instead of browsing generic alphabetical lists, Namely uses AI to generate baby name suggestions based on both partners' exact tastes in style, origin, and name length. Because you each review the generated names privately, there is no pressure or vetoing. You simply get a curated queue of baby names for couples, and an instant match when you both genuinely agree.",
   ctaHeading: "Ready to generate names you'll both love?",
-  ctaSubtext: "Download free. Let AI do the hard work while you enjoy the moment.",
+  ctaSubtext: "Download Namely. Let AI do the hard work while you enjoy the moment.",
   screenshotAlts: [
     "Namely app showing AI-generated baby name suggestions on the swipe screen",
     "Namely app Likes screen listing saved baby name suggestions",

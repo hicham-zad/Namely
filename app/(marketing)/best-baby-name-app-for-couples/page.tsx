@@ -21,7 +21,7 @@ const config: LandingPageConfig = {
     "Most baby name apps are built for one person browsing alone. Namely is built for two people who need to reach the same answer. Each partner swipes through AI-generated suggestions in private — no vetoes, no lobbying, no guilt. A match is only revealed when you've both independently liked the same name. That's the only version of \"agreement\" that actually sticks.",
   badgeText: "✓ Fair for both partners · No veto politics",
   ctaHeading: "Find out why couples choose Namely.",
-  ctaSubtext: "Download free. Start your 3-day trial and see why it works.",
+  ctaSubtext: "Download Namely and see why it works.",
   screenshotAlts: [
     "Namely app swipe screen — the fairest way for couples to pick a baby name",
     "Namely app Likes screen showing names one partner has saved",
@@ -40,7 +40,7 @@ const config: LandingPageConfig = {
     },
     {
       q: "How much does Namely cost?",
-      a: "Namely is free to download and includes a 3-day free trial. After that, a $5.99/month subscription unlocks unlimited AI name generation and live partner sync. Cancel anytime from the App Store or Google Play.",
+      a: "Namely is free to download; a $6.99/week subscription unlocks unlimited AI name generation and live partner sync. Cancel anytime from the App Store or Google Play.",
     },
   ],
 };

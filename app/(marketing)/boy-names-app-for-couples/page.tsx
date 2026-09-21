@@ -20,7 +20,7 @@ const config: LandingPageConfig = {
   heroParagraph:
     "You're having a boy — now you just need to agree on a name. Namely is built for exactly this moment. Filter the AI-powered queue to boy names only, then each partner swipes through strong, classic, and modern suggestions independently. Whether you love timeless names like James and Oliver, or something rarer like Cassius or Rafferty, Namely surfaces boy names you'd actually consider — and matches you when you both agree.",
   ctaHeading: "Find the boy name you'll both be proud of.",
-  ctaSubtext: "Download free. Filter for boy names and start matching with your partner today.",
+  ctaSubtext: "Download Namely. Filter for boy names and start matching with your partner today.",
   screenshotAlts: [
     "Namely app swipe screen showing a boy name suggestion card",
     "Namely app Likes screen listing saved boy names",

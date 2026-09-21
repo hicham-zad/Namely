@@ -21,7 +21,7 @@ const config: LandingPageConfig = {
     "Choosing a Muslim or Arabic name carries weight — it's a gift of meaning and heritage that your child will carry for life. Namely makes the search a shared one. Filter by Arabic or Islamic origin and the AI surfaces names rooted in the Quran, classical Arabic, and Islamic tradition: from beloved classics like Yusuf, Maryam, and Ibrahim, to beautiful and less-common choices like Zaynab, Idris, and Noor. Each partner swipes in private, and a match appears when you both choose the same name.",
   badgeText: "✓ Arabic & Islamic origin names · Filter by origin",
   ctaHeading: "Find a name with meaning you'll both be proud to give.",
-  ctaSubtext: "Download free. Filter for Arabic and Islamic names and start matching today.",
+  ctaSubtext: "Download Namely. Filter for Arabic and Islamic names and start matching today.",
   screenshotAlts: [
     "Namely app swipe screen showing an Arabic and Muslim baby name suggestion",
     "Namely app Likes screen with saved Muslim and Islamic name options",

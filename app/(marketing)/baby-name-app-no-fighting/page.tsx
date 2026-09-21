@@ -21,7 +21,7 @@ const config: LandingPageConfig = {
     "You love Aria, they love George, and every conversation ends in a standoff. Baby name debates are one of the most surprisingly stressful parts of pregnancy — and they don't have to be. Namely removes the back-and-forth entirely. Both partners swipe through names in private, with zero influence on each other's choices. A match only appears when you've genuinely both said yes — which means when it happens, neither of you is giving in. You've actually agreed.",
   badgeText: "✓ No vetoes · No guilt-trips · Just matches",
   ctaHeading: "End the debate. Start matching.",
-  ctaSubtext: "Download free. Both partners vote in private — a match means you genuinely agree.",
+  ctaSubtext: "Download Namely. Both partners vote in private — a match means you genuinely agree.",
   screenshotAlts: [
     "Namely app swipe screen — vote privately to avoid baby name arguments",
     "Namely app Likes screen — your private list, hidden from your partner until you match",

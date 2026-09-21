@@ -40,7 +40,7 @@ const features = [
   { icon: <Zap size={28} color={LOGO_PINK} />, title: "Real-Time Sync", desc: "Swipes sync instantly. Names your partner rejects won't appear in your queue." },
   { icon: <SlidersHorizontal size={28} color={LOGO_BLUE} />, title: "Deep Customisation", desc: "Filter by gender, style, origin, country, name length, starting letter, and names to avoid." },
   { icon: <Heart size={28} color={LOGO_PINK} />, title: "Likes & Matches", desc: "All your liked names and shared matches are saved in one searchable, sortable list." },
-  { icon: <BadgeDollarSign size={28} color={LOGO_BLUE} />, title: "Transparent Pricing", desc: "$5.99/month, 3-day free trial. Cancel anytime via App Store or Google Play — no hassle." },
+  { icon: <BadgeDollarSign size={28} color={LOGO_BLUE} />, title: "Transparent Pricing", desc: "$6.99/week. Cancel anytime via App Store or Google Play — no hassle." },
 ];
 
 const SCREENSHOTS = [
@@ -95,7 +95,7 @@ export default function LandingPage({ config }: { config: LandingPageConfig }) {
   const appSchema: WithContext<SoftwareApplication> = {
     "@context": "https://schema.org", "@type": "SoftwareApplication",
     name: "Namely — Baby Name Matcher", operatingSystem: "iOS, Android", applicationCategory: "LifestyleApplication",
-    offers: { "@type": "Offer", price: "5.99", priceCurrency: "USD", description: "Free to download. $5.99/month with 3-day free trial." },
+    offers: { "@type": "Offer", price: "6.99", priceCurrency: "USD", description: "Free to download. Subscription required: $6.99/week, cancel anytime." },
     aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", ratingCount: "120" },
     description: "Namely helps couples choose a baby name together using AI-powered suggestions and a swipe-to-match mechanic.",
     url: canonicalUrl,
@@ -114,7 +114,7 @@ export default function LandingPage({ config }: { config: LandingPageConfig }) {
           <div style={{ maxWidth: 560 }}>
             <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "#fff", border: "1.5px solid #f1f5f9", borderRadius: 999, padding: "0.3rem 0.85rem", marginBottom: "1.5rem" }}>
               <span style={{ color: LOGO_PINK, fontSize: "0.75rem", fontWeight: 700 }}>
-                {config.badgeText ?? "✓ Free 3-day trial · No credit card needed"}
+                {config.badgeText ?? "✓ Free to download · Cancel anytime"}
               </span>
             </div>
 
@@ -132,12 +132,8 @@ export default function LandingPage({ config }: { config: LandingPageConfig }) {
                 target="_blank" rel="noopener noreferrer" id="hero-main-cta"
                 style={{ display: "inline-flex", alignItems: "center", gap: 8, background: LOGO_BLUE, color: TEXT_DARK, fontWeight: 800, fontSize: "1rem", padding: "0.85rem 1.75rem", borderRadius: 999, textDecoration: "none", boxShadow: "0 4px 12px rgba(155, 204, 245, 0.4)" }}
               >
-                <Apple size={20} fill="currentColor" /> Get the App Free
+                <Apple size={20} fill="currentColor" /> Get the App
               </a>
-              <Link href="/login" id="hero-web-cta"
-                style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#fff", color: TEXT_DARK, fontWeight: 800, fontSize: "1rem", padding: "0.85rem 1.75rem", borderRadius: 999, textDecoration: "none", border: "2px solid #f1f5f9" }}>
-                Start Matching
-              </Link>
             </div>
           </div>
 
@@ -314,12 +310,8 @@ export default function LandingPage({ config }: { config: LandingPageConfig }) {
               target="_blank" rel="noopener noreferrer" id="cta-main-btn"
               style={{ display: "inline-flex", alignItems: "center", gap: 8, background: LOGO_BLUE, color: TEXT_DARK, fontWeight: 800, fontSize: "1rem", padding: "0.85rem 1.75rem", borderRadius: 999, textDecoration: "none", boxShadow: "0 4px 12px rgba(155, 204, 245, 0.4)" }}
             >
-              <Apple size={20} fill="currentColor" /> Get the App Free
+              <Apple size={20} fill="currentColor" /> Get the App
             </a>
-            <Link href="/login" id="cta-web-btn"
-              style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#fff", color: TEXT_DARK, fontWeight: 800, fontSize: "1rem", padding: "0.85rem 1.75rem", borderRadius: 999, textDecoration: "none", border: "2px solid #f1f5f9" }}>
-              Start Matching
-            </Link>
           </div>
           <div style={{ display: "flex", justifyContent: "center", marginTop: "3rem" }}>
             <a href="https://daniellaunches.com" target="_blank" rel="noopener noreferrer">
