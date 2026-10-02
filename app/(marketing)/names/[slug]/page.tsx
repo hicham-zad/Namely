@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getNameBySlug, getNameSummariesBySlugs, getAllNameSlugs } from "@/lib/names";
+import { getNameBySlug, getNameSummariesBySlugs, getAllNameSlugs, getNamesByGender } from "@/lib/names";
 import JsonLd from "@/components/layout/JsonLd";
 
 export const revalidate = 86400; // Re-generate every 24 hours
@@ -40,7 +40,7 @@ export async function generateMetadata({
     const description = `${name.name} is a ${name.gender === "unisex" ? "unisex" : `${name.gender}'s`} name meaning "${name.meaning_short.replace(/^[^"]*?"/, "").replace(/"[^"]*$/, "")}" — ${name.personality_note.split(".")[0]}.`;
 
     return {
-      title,
+      title: { absolute: title },
       description: description.length > 160 ? description.slice(0, 157) + "…" : description,
       alternates: { canonical: `${SITE_URL}/names/${slug}` },
       openGraph: {
@@ -99,6 +99,20 @@ export default async function NameDetailPage({
   const similarNames = name.similar_names
     ? await getNameSummariesBySlugs(name.similar_names.slice(0, 8))
     : [];
+
+  // Few suggested names have their own page yet, so top up with same-gender names.
+  // Start just after this name in rank order so links spread across every page,
+  // not just the most popular ones.
+  if (similarNames.length < 8) {
+    const pool = await getNamesByGender(name.gender, 500);
+    const self = pool.findIndex((n) => n.slug === name.slug);
+    const rotated = [...pool.slice(self + 1), ...pool.slice(0, Math.max(self, 0))];
+    const taken = new Set(similarNames.map((n) => n.slug));
+    for (const n of rotated) {
+      if (similarNames.length >= 8) break;
+      if (!taken.has(n.slug)) similarNames.push(n);
+    }
+  }
 
   // Split meaning_long into paragraphs
   const meaningParagraphs = name.meaning_long

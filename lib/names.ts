@@ -127,6 +127,23 @@ export async function getAllNameSlugs(): Promise<string[]> {
   }
 }
 
+// ── Published slugs with last-modified dates (for sitemap) ───────────────────
+
+export async function getSitemapNames(): Promise<{ slug: string; updated_at: string }[]> {
+  try {
+    const { data, error } = await db()
+      .from("name_pages")
+      .select("slug, updated_at")
+      .eq("status", "published")
+      .order("ssa_rank", { ascending: true, nullsFirst: false });
+
+    if (error) throw error;
+    return data || [];
+  } catch {
+    return [];
+  }
+}
+
 // ── Browse by gender ───────────────────────────────────────────────────────────
 
 export async function getNamesByGender(

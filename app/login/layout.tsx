@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Login | Namely",
+  title: { absolute: "Login | Namely" },
   alternates: { canonical: "https://matchbabynames.com/login" },
   openGraph: {
     title: "Login | Namely",

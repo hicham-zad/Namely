@@ -108,7 +108,8 @@ export async function listPosts({
   }
 
   const { data, error, count } = await query;
-  if (error) throw error;
+  // PGRST103: page past the end — treat as an empty page rather than a server error
+  if (error && error.code !== "PGRST103") throw error;
 
   return {
     posts: (data as BlogPostSummary[]) || [],
@@ -193,6 +194,18 @@ export async function getAllSlugs(): Promise<string[]> {
 
   if (error) throw error;
   return (data || []).map((r: { slug: string }) => r.slug);
+}
+
+// ── Published slugs with last-modified dates (for sitemap) ───────────────────
+
+export async function getSitemapPosts(): Promise<{ slug: string; updated_at: string }[]> {
+  const { data, error } = await db()
+    .from("blog_posts")
+    .select("slug, updated_at")
+    .eq("status", "published");
+
+  if (error) throw error;
+  return data || [];
 }
 
 // ── Auto-publish next draft ───────────────────────────────────────────────────

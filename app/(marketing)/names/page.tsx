@@ -17,7 +17,7 @@ export async function generateMetadata({
 
   const titleSuffix = gender ? ` — ${gender.charAt(0).toUpperCase() + gender.slice(1)} Names` : "";
   return {
-    title: `Baby Name Directory${titleSuffix} — Meaning, Origin & Popularity | Namely`,
+    title: { absolute: `Baby Name Directory${titleSuffix} — Meaning, Origin & Popularity | Namely` },
     description:
       "Browse our complete baby name directory. Every name includes meaning, origin, pronunciation, popularity rank, middle name pairings, and more.",
     alternates: { canonical: gender ? `${SITE_URL}/names?gender=${gender}` : `${SITE_URL}/names` },

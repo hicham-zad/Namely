@@ -60,6 +60,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/blog/how-to-choose-a-baby-name-both-parents-will-love",
+        destination: "/blog/how-to-avoid-baby-name-arguments",
+        permanent: true,
+      },
+      {
         source: "/100-unique-baby-names-and-meanings",
         destination: "/blog/100-unique-baby-names-and-meanings",
         permanent: true,

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { listPosts, getTopics } from "@/lib/blog";
 import JsonLd from "@/components/layout/JsonLd";
 import type { Blog, WithContext } from "schema-dts";
@@ -30,7 +31,7 @@ function formatDate(iso: string | null) {
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Baby Name Blog — Tips, Trends & Ideas for Couples | Namely",
+    title: { absolute: "Baby Name Blog — Tips, Trends & Ideas for Couples | Namely" },
     description: "Explore baby name guides, trends, and tips for couples. Find the perfect name together with Namely.",
     alternates: { canonical: "https://matchbabynames.com/blog" },
     openGraph: {
@@ -64,6 +65,9 @@ export default async function BlogIndexPage({
     listPosts({ page, limit: 12, topic }),
     getTopics(),
   ]);
+
+  // An empty filtered/paginated listing is a soft 404 to Google — return a real one.
+  if (posts.length === 0 && (topic || page > 1)) notFound();
 
   return (
     <div style={{ background: "var(--surface)", minHeight: "100vh" }}>
