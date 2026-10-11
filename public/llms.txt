@@ -11,18 +11,24 @@ Namely is a mobile app (iOS and Android) that helps couples choose a baby name t
 
 - **AI name generation**: Namely uses AI to generate personalised baby name suggestions based on the couple's style preferences, cultural background, and name length preferences.
 - **Swipe-to-match**: Each partner independently swipes through names. A match is revealed only when both partners like the same name.
-- **Real-time sync**: Both partners' swipes are synchronised in real time via Supabase. Names that one partner has already rejected are not shown again.
-- **No repeated names**: Once a name is swiped, it is removed from the queue permanently.
+- **Real-time sync**: Both partners' swipes are synchronised in real time. Names that one partner has already rejected are not shown again.
+- **No repeated names**: Once a name is swiped, it is removed from the queue (the last swipe can be undone).
+- **Meanings & origins**: Every name shows its meaning, origin and pronunciation, plus popularity, length and style tags.
+- **Filters**: Boy, girl or unisex; style; origin; length; starting letter; names to avoid.
 - **Cross-platform**: Available on iOS (App Store) and Android (Google Play). matchbabynames.com is the app's landing page and content site.
 
 ## Pricing
 
 - Namely is free to download.
 - A subscription is required to access unlimited AI name generation and real-time partner sync.
-- Subscription price: $5.99 per month.
-- A 3-day free trial is included.
+- Subscription price: $6.99 per week (or the local-currency equivalent shown in the store).
 - Subscriptions are managed through the App Store (iOS) or Google Play (Android).
 - To cancel, use the standard subscription management in your device's app store settings.
+
+## Download
+
+- App Store (iPhone & iPad): https://apps.apple.com/us/app/namely-baby-name-matcher/id6786483368
+- Google Play (Android): https://play.google.com/store/apps/details?id=com.nametogether.namely
 
 ## Company
 
@@ -40,7 +46,23 @@ Namely is a mobile app (iOS and Android) that helps couples choose a baby name t
 - Terms of Service: https://matchbabynames.com/terms
 - Account Deletion: https://matchbabynames.com/delete-account
 
-## Landing Pages (SEO)
+## Feature Guides
+
+- https://matchbabynames.com/features — overview of every feature
+- https://matchbabynames.com/features/swipe-baby-names — Swipe Baby Names: A swipe-to-decide name card for every baby name — like it or pass in a second.
+- https://matchbabynames.com/features/baby-name-matching — Partner Name Matching: See only the names you and your partner both love — instantly, with no arguments.
+- https://matchbabynames.com/features/baby-name-meanings — Name Meanings & Origins: Meaning, origin, pronunciation, popularity and length for every baby name.
+- https://matchbabynames.com/features/baby-name-filters — Gender, Style & Origin Filters: Filter baby names by boy, girl or unisex, style, origin, length and more.
+- https://matchbabynames.com/features/ai-baby-name-generator — AI Baby Name Generator: Fresh, personalised lists of 30 names that blend both partners' tastes.
+- https://matchbabynames.com/features/partner-sync — Partner Linking & Sync: Link with your partner once and stay in sync across iPhone and Android.
+- https://matchbabynames.com/features/baby-name-shortlist — Likes, Matches & Shortlist: Every liked name, every match and your starred favourites — organised and searchable.
+
+## Content
+
+- https://matchbabynames.com/names — free baby name directory (meaning, origin, pronunciation, popularity)
+- https://matchbabynames.com/blog — articles on choosing a baby name as a couple
+
+## Landing Pages
 
 - https://matchbabynames.com/baby-name-generator-for-couples — baby name generator for couples
 - https://matchbabynames.com/tinder-for-baby-names — tinder for baby names (swipe-to-match)
@@ -52,13 +74,6 @@ Namely is a mobile app (iOS and Android) that helps couples choose a baby name t
 - https://matchbabynames.com/baby-name-app-no-fighting — stop baby name arguments
 - https://matchbabynames.com/pregnancy-baby-name-app — baby name app for expecting parents
 - https://matchbabynames.com/muslim-baby-names-app-couples — Muslim and Arabic baby names
-
-## Technology
-
-- Backend: Supabase (PostgreSQL database, real-time subscriptions, authentication)
-- Payments: RevenueCat (subscription management), Stripe (payment processing)
-- Mobile: React Native (Expo)
-- Web: Next.js
 
 ## Data & Privacy
 
@@ -74,7 +89,7 @@ Namely is a mobile app (iOS and Android) that helps couples choose a baby name t
 Each partner swipes through names independently. A match is only revealed when both partners have swiped right on the same name.
 
 **Is Namely free?**
-Namely is free to download. A $5.99/month subscription (with a 3-day free trial) unlocks unlimited AI name generation and real-time partner sync.
+Namely is free to download. A $6.99/week subscription unlocks unlimited AI name generation and real-time partner sync.
 
 **How do I invite my partner?**
 After creating an account, tap "Invite Partner" in the app. You can share a link or a code. Your partner installs the app and enters the code to link your accounts.

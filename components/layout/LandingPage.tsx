@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Plus, ShieldCheck, Smartphone, Sparkles, Star } from "lucide-react";
+import { ArrowRight, Plus, BadgeCheck, ShieldCheck, Smartphone, Sparkles } from "lucide-react";
 import JsonLd from "@/components/layout/JsonLd";
 import StoreButtons from "@/components/layout/StoreButtons";
 import { HeroFan, ShotGallery } from "@/components/layout/AppScreens";
@@ -47,7 +47,6 @@ export default function LandingPage({ config }: { config: LandingPageConfig }) {
     "@context": "https://schema.org", "@type": "SoftwareApplication",
     name: "Namely — Baby Name Matcher", operatingSystem: "iOS, Android", applicationCategory: "LifestyleApplication",
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Free to download. Namely Premium is $6.99/week, cancel anytime." },
-    aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", ratingCount: "120" },
     description: "Namely helps couples choose a baby name together using AI-powered suggestions and a swipe-to-match mechanic.",
     url: canonicalUrl,
     downloadUrl: [IOS_APP_URL, ANDROID_APP_URL],
@@ -78,7 +77,7 @@ export default function LandingPage({ config }: { config: LandingPageConfig }) {
               <div className="ft-trust">
                 <span><Smartphone size={15} aria-hidden="true" /> iPhone, iPad &amp; Android</span>
                 <span><ShieldCheck size={15} aria-hidden="true" /> Private votes</span>
-                <span><Star size={15} fill="#fbbf24" color="#fbbf24" aria-hidden="true" /> 4.8 rating</span>
+                <span><BadgeCheck size={15} aria-hidden="true" /> Free to download</span>
               </div>
             </div>
             <div className="ft-hero__visual">
