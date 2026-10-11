@@ -3,12 +3,12 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getNameBySlug, getNameSummariesBySlugs, getAllNameSlugs, getNamesByGender } from "@/lib/names";
 import JsonLd from "@/components/layout/JsonLd";
+import StoreButtons from "@/components/layout/StoreButtons";
 
 export const revalidate = 86400; // Re-generate every 24 hours
 export const dynamicParams = true; // Serve new slugs on-demand
 
 const SITE_URL = "https://matchbabynames.com";
-const APP_STORE_URL = "https://apps.apple.com/us/app/namely-baby-name-matcher/id6786483368";
 const LOGO_PINK = "#FF6B8A";
 const LOGO_PINK_LIGHT = "#fb9cb0";
 
@@ -578,15 +578,7 @@ export default async function NameDetailPage({
               See if your partner agrees. Swipe on names together in Namely — the baby name
               matching app for couples.
             </p>
-            <a
-              href={`${APP_STORE_URL}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              id="name-sidebar-app-cta"
-              className="name-cta-btn"
-            >
-              Try Namely →
-            </a>
+            <StoreButtons idPrefix="name-sidebar" align="center" />
           </div>
         </aside>
       </div>
@@ -604,15 +596,7 @@ export default async function NameDetailPage({
             </p>
           </div>
           <div className="name-bottom-cta-actions">
-            <a
-              href={`${APP_STORE_URL}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              id="name-bottom-app-cta"
-              className="name-cta-btn name-cta-btn--large"
-            >
-              Start Matching
-            </a>
+            <StoreButtons idPrefix="name-bottom" variant="light" />
             <span className="name-cta-sub">Cancel anytime</span>
           </div>
         </div>

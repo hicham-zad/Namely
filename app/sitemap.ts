@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getSitemapPosts } from "@/lib/blog";
 import { getSitemapNames } from "@/lib/names";
+import { FEATURES } from "@/lib/features";
 
 const SITE_URL = "https://matchbabynames.com";
 
@@ -47,6 +48,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${SITE_URL}/baby-name-app-no-fighting`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE_URL}/pregnancy-baby-name-app`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE_URL}/muslim-baby-names-app-couples`, changeFrequency: "monthly", priority: 0.8 },
+    // App feature pages
+    { url: `${SITE_URL}/features`, changeFrequency: "monthly", priority: 0.9 },
+    ...FEATURES.map((f) => ({ url: `${SITE_URL}/features/${f.slug}`, changeFrequency: "monthly" as const, priority: 0.85 })),
   ];
 
   const blogRoutes: MetadataRoute.Sitemap = posts.map(({ slug, updated_at }) => ({
