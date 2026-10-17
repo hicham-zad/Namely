@@ -1,4 +1,6 @@
 import Link from "next/link";
+import StoreButtons from "@/components/layout/StoreButtons";
+import { FEATURES } from "@/lib/features";
 
 const EXPLORE_LINKS = [
   { href: "/names", label: "Baby Name Directory" },
@@ -27,8 +29,25 @@ export default function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer style={{ background: "var(--surface)", color: "var(--text3)", borderTop: "1px solid var(--border-lt)" }}>
+      {/* Features + download */}
+      <div style={{ maxWidth: 1152, margin: "0 auto", padding: "2rem 1.5rem 0", display: "flex", flexWrap: "wrap", alignItems: "flex-start", justifyContent: "space-between", gap: "1.5rem" }}>
+        <div style={{ flex: "1 1 420px" }}>
+          <p style={{ fontSize: "0.7rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em", color: "var(--text3)", marginBottom: "0.75rem" }}>
+            <Link href="/features" style={{ color: "inherit", textDecoration: "none" }}>App features</Link>
+          </p>
+          <nav aria-label="App features" style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem 1.25rem" }}>
+            {FEATURES.map((f) => (
+              <Link key={f.slug} href={`/features/${f.slug}`} style={{ fontSize: "0.75rem", color: "var(--text2)", textDecoration: "none" }}>
+                {f.name}
+              </Link>
+            ))}
+          </nav>
+        </div>
+        <StoreButtons idPrefix="footer" />
+      </div>
+
       {/* Explore section */}
-      <div style={{ maxWidth: 1152, margin: "0 auto", padding: "2rem 1.5rem 1rem" }}>
+      <div style={{ maxWidth: 1152, margin: "0 auto", padding: "1.5rem 1.5rem 1rem" }}>
         <p style={{ fontSize: "0.7rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em", color: "var(--text3)", marginBottom: "0.75rem" }}>
           Explore Namely
         </p>

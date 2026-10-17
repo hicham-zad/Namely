@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Apple, Heart } from "lucide-react";
+import { Heart } from "lucide-react";
+import StoreButtons from "@/components/layout/StoreButtons";
 import "@/app/pages.css";
 import "@/app/dashboard.css";
-
-const APP_STORE_URL = "https://apps.apple.com/us/app/namely-baby-name-matcher/id6786483368";
 
 interface Props {
   params: Promise<{ code: string }>;
@@ -47,9 +46,7 @@ export default async function JoinPage({ params }: Props) {
         </div>
 
         <div className="join-actions">
-          <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" className="btn btn--primary join-cta">
-            <Apple size={18} fill="currentColor" /> Get the App
-          </a>
+          <StoreButtons idPrefix="join" align="center" />
         </div>
       </div>
     </div>

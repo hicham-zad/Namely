@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import StoreButtons from "@/components/layout/StoreButtons";
 
 export default function Header() {
   return (
@@ -17,49 +18,29 @@ export default function Header() {
         </Link>
 
         {/* Navigation & Actions */}
-        <nav aria-label="Main navigation" style={{ display: "flex", alignItems: "center", gap: "1.5rem" }}>
-          <Link 
-            href="/blog" 
-            className="header-nav-link"
-            style={{ 
-              color: "var(--text2)", 
-              fontWeight: 600, 
-              fontSize: "0.95rem", 
-              textDecoration: "none",
-              transition: "color 0.15s ease"
-            }}
-          >
+        <nav aria-label="Main navigation" style={{ display: "flex", alignItems: "center", gap: "1.25rem" }}>
+          <Link href="/features" className="header-nav-link" id="header-features-link">
+            Features
+          </Link>
+          <Link href="/blog" className="header-nav-link" id="header-blog-link">
             Blog
           </Link>
-          <a 
-            href="https://apps.apple.com/us/app/namely-baby-name-matcher/id6786483368" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            id="header-cta-btn"
-            style={{ 
-              display: "inline-flex", 
-              alignItems: "center", 
-              background: "#1f2937", 
-              color: "#fff", 
-              fontWeight: 700, 
-              fontSize: "0.875rem", 
-              padding: "0.55rem 1.25rem", 
-              borderRadius: 999, 
-              textDecoration: "none",
-              transition: "opacity 0.15s ease, transform 0.15s ease"
-            }}
-          >
-            Get the App
-          </a>
+          <StoreButtons idPrefix="header" variant="compact" />
         </nav>
       </div>
       <style>{`
+        .header-nav-link {
+          color: var(--text2);
+          font-weight: 600;
+          font-size: 0.95rem;
+          text-decoration: none;
+          transition: color 0.15s ease;
+        }
         .header-nav-link:hover {
           color: var(--text) !important;
         }
-        #header-cta-btn:hover {
-          opacity: 0.9;
-          transform: translateY(-1px);
+        @media (max-width: 560px) {
+          .header-nav-link { display: none; }
         }
       `}</style>
     </header>

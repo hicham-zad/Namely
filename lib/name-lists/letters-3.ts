@@ -1,0 +1,243 @@
+import type { NameListPage } from "./types";
+
+const UPDATED = "2026-10-16";
+
+export const LETTER_PAGES_3: NameListPage[] = [
+  // ── D ───────────────────────────────────────────────────────────────────────
+  {
+    slug: "d",
+    kind: "letter",
+    title: "Baby Names That Start With D: {n} Girl & Boy Names With Meanings",
+    metaTitle: "Baby Names Starting With D: {n} Girl & Boy Names + Meanings",
+    metaDescription:
+      "{n} baby names that start with D, from Daisy and Delilah to Dexter and Daniel. Meanings, origins and a short note on each name.",
+    kicker: "Names starting with D",
+    intro: [
+      "D names are steady and confident: Daniel, David, Dominic, Daisy, Dorothy. This list gathers {n} names that start with D, with meaning, origin and a short note on each, from timeless classics to distinctive choices.",
+      "Where an origin is disputed, as with Declan, Dara and Dustin, we say so. Names are grouped by gender and ordered roughly from classic to distinctive.",
+    ],
+    featured: ["Delphine", "Daphne", "Dahlia", "Dexter", "Dorian", "Desmond"],
+    tips: [
+      {
+        heading: "Flower and nature options",
+        body: "Daisy, Dahlia and Daphne (laurel) are D names from the garden. They are easy to love, easy to spell and have a clear meaning to share with your child.",
+      },
+      {
+        heading: "Strong consonant, soft ending",
+        body: "The firm D opening pairs well with a soft ending, as in Daphne, Dahlia, Dante and Dylan. If you want a name that sounds both strong and gentle, this is a good pattern.",
+      },
+      {
+        heading: "Look at the biblical and Celtic roots",
+        body: "Daniel, David, Deborah, Delilah and Dinah are biblical, while Declan, Desmond, Darcy and Delaney are Irish. Both families give you names with a deep history and a clear meaning.",
+      },
+    ],
+    names: [
+      // Girls
+      { name: "Dahlia", gender: "girl", origin: "Swedish", meaning: "the dahlia flower (named after botanist Anders Dahl)", note: "A bold, bright flower name." },
+      { name: "Daisy", gender: "girl", origin: "English", meaning: "day's eye (the daisy flower)", note: "Cheerful and vintage." },
+      { name: "Daniela", gender: "girl", origin: "Hebrew", meaning: "God is my judge", note: "A feminine form of Daniel, popular across Europe and Latin America." },
+      { name: "Danielle", gender: "girl", origin: "Hebrew / French", meaning: "God is my judge", note: "A familiar feminine take on Daniel." },
+      { name: "Daphne", gender: "girl", origin: "Greek", meaning: "laurel tree", note: "A nymph in Greek myth; elegant and rare." },
+      { name: "Delaney", gender: "girl", origin: "Irish", meaning: "uncertain; an Irish surname", note: "Friendly and surname-based." },
+      { name: "Delilah", gender: "girl", origin: "Hebrew", meaning: "uncertain; sometimes read as 'delicate' or 'languishing'", note: "A biblical name with a musical sound." },
+      { name: "Delphine", gender: "girl", origin: "French / Greek", meaning: "of Delphi; also linked to 'dolphin'", note: "Elegant and rare." },
+      { name: "Demi", gender: "girl", origin: "French / Greek", meaning: "half", note: "Short and modern." },
+      { name: "Deborah", gender: "girl", origin: "Hebrew", meaning: "bee", note: "A biblical judge and prophet; nickname Debbie." },
+      { name: "Diana", gender: "girl", origin: "Latin", meaning: "divine", note: "A Roman goddess and a regal classic." },
+      { name: "Dinah", gender: "girl", origin: "Hebrew", meaning: "judged, vindicated", note: "A vintage biblical name." },
+      { name: "Dorothea", gender: "girl", origin: "Greek", meaning: "gift of God", note: "A romantic long form of Dorothy." },
+      { name: "Dorothy", gender: "girl", origin: "Greek", meaning: "gift of God", note: "Timeless and loved, thanks to 'The Wizard of Oz'." },
+      { name: "Dulcie", gender: "girl", origin: "Latin", meaning: "sweet", note: "A rare, sweet vintage name." },
+      // Boys
+      { name: "Dallas", gender: "boy", origin: "Scottish", meaning: "meadow dwelling (a place name)", note: "A Texas city and an easygoing name." },
+      { name: "Damian", gender: "boy", origin: "Greek", meaning: "to tame, to subdue", note: "A saint's name with a smooth sound." },
+      { name: "Daniel", gender: "boy", origin: "Hebrew", meaning: "God is my judge", note: "A timeless biblical classic with the nickname Danny." },
+      { name: "Dante", gender: "boy", origin: "Latin", meaning: "enduring (a short form of Durante)", note: "Literary and bold, from the poet Dante Alighieri." },
+      { name: "Darius", gender: "boy", origin: "Persian", meaning: "possessing good, wealthy", note: "An ancient king's name." },
+      { name: "David", gender: "boy", origin: "Hebrew", meaning: "beloved", note: "A classic that is always respected." },
+      { name: "Dean", gender: "boy", origin: "English", meaning: "valley, or a church leader", note: "A short, classic name." },
+      { name: "Declan", gender: "boy", origin: "Irish", meaning: "uncertain; an Irish saint's name sometimes read as 'full of goodness'", note: "Irish, friendly and strong." },
+      { name: "Dennis", gender: "boy", origin: "Greek", meaning: "of Dionysus", note: "A vintage name with a friendly feel." },
+      { name: "Derek", gender: "boy", origin: "Germanic", meaning: "ruler of the people", note: "A mid-century classic." },
+      { name: "Desmond", gender: "boy", origin: "Irish", meaning: "from south Munster", note: "Dignified and distinctive, as in Desmond Tutu." },
+      { name: "Dexter", gender: "boy", origin: "Latin", meaning: "right-handed, skilled", note: "Quirky and smart; nickname Dex." },
+      { name: "Diego", gender: "boy", origin: "Spanish", meaning: "uncertain; sometimes linked to Greek didache, 'teaching'", note: "Warm and international." },
+      { name: "Dominic", gender: "boy", origin: "Latin", meaning: "of the Lord", note: "A classic saint's name with a modern sound." },
+      { name: "Donald", gender: "boy", origin: "Gaelic", meaning: "world ruler", note: "A traditional Scottish name." },
+      { name: "Dorian", gender: "boy", origin: "Greek", meaning: "from Doris, a region of Greece", note: "Literary, from 'The Picture of Dorian Gray'." },
+      { name: "Douglas", gender: "boy", origin: "Scottish Gaelic", meaning: "dark water", note: "A Scottish clan name." },
+      { name: "Drake", gender: "boy", origin: "English", meaning: "dragon (or a male duck)", note: "Bold and modern." },
+      { name: "Dylan", gender: "boy", origin: "Welsh", meaning: "son of the sea", note: "A poetic Welsh classic." },
+      // Unisex
+      { name: "Dakota", gender: "unisex", origin: "Dakota Sioux", meaning: "friend, ally", note: "Open and warm." },
+      { name: "Dana", gender: "unisex", origin: "Scandinavian / Irish", meaning: "from Denmark (Scandinavian); several other meanings", note: "A brief, easygoing name." },
+      { name: "Darcy", gender: "unisex", origin: "Irish / Norman", meaning: "dark (Irish) or 'from Arcy' (Norman)", note: "Literary, thanks to Mr Darcy." },
+    ],
+    faqs: [
+      { q: "What are the most popular baby names that start with D?", a: "Daniel, David, Dominic and Dylan are well-known for boys, and Daisy, Delilah and Diana are popular for girls." },
+      { q: "What are unique baby names that start with D?", a: "Delphine, Dahlia, Dorothea, Dexter, Desmond and Dorian are rarer but easy to pronounce." },
+      { q: "What are gender-neutral baby names that start with D?", a: "Dakota, Dana, Darcy and Dylan are all used for any gender." },
+      { q: "What are D names with a nature meaning?", a: "Daisy, Dahlia and Daphne (laurel) are plants, and Dean (valley) and Dallas (meadow) come from the landscape." },
+    ],
+    updated: UPDATED,
+  },
+
+  // ── T ───────────────────────────────────────────────────────────────────────
+  {
+    slug: "t",
+    kind: "letter",
+    title: "Baby Names That Start With T: {n} Girl & Boy Names With Meanings",
+    metaTitle: "Baby Names Starting With T: {n} Girl & Boy Names + Meanings",
+    metaDescription:
+      "{n} baby names that start with T, from Thea and Tessa to Theo and Tobias. Meanings, origins and a short note on each name.",
+    kicker: "Names starting with T",
+    intro: [
+      "T names are crisp and cheerful: Theo, Thomas, Thea, Tilly. This list gathers {n} names that start with T, with the meaning, origin and a short note on each, from timeless classics to rare finds.",
+      "Where an origin is uncertain, as with Tessa, Theresa and Tristan, we say so. Names are grouped by gender and ordered roughly from classic to distinctive.",
+    ],
+    featured: ["Thea", "Thalia", "Tallulah", "Thaddeus", "Tobias", "Titus"],
+    tips: [
+      {
+        heading: "Mind the 'Th' sound",
+        body: "Names starting with 'Th' (Thea, Theo, Thomas, Thalia) are pronounced with a 't' in some languages and a soft 'th' in others. Check how family members will say it.",
+      },
+      {
+        heading: "Look at the Greek family",
+        body: "Thea, Theo, Theodore, Theodora, Thalia and Theresa all come from Greek. Many have a link to 'god' (theos), which gives them a spiritual feel.",
+      },
+      {
+        heading: "Nicknames are built in",
+        body: "Thomas to Tom or Tommy, Matilda to Tilly, Tabitha to Tabby, Timothy to Tim. If you like the nickname, the full name gives you flexibility later in life.",
+      },
+    ],
+    names: [
+      // Girls
+      { name: "Tabitha", gender: "girl", origin: "Aramaic", meaning: "gazelle", note: "A biblical name with the nickname Tabby." },
+      { name: "Talia", gender: "girl", origin: "Hebrew", meaning: "dew from heaven", note: "Soft and lyrical." },
+      { name: "Tallulah", gender: "girl", origin: "Native American (disputed)", meaning: "uncertain; often explained as 'leaping water'", note: "A showy, vintage-glam name." },
+      { name: "Tamara", gender: "girl", origin: "Hebrew", meaning: "date palm", note: "A Georgian queen's name and a lovely classic." },
+      { name: "Tamsin", gender: "girl", origin: "Cornish", meaning: "twin (a form of Thomasina)", note: "Rare and charming." },
+      { name: "Tara", gender: "girl", origin: "Irish / Sanskrit", meaning: "hill (Irish); star (Sanskrit)", note: "Two languages and two meanings." },
+      { name: "Tatiana", gender: "girl", origin: "Latin / Russian", meaning: "from the Roman family name Tatius", note: "Regal and Russian; nickname Tanya." },
+      { name: "Tegan", gender: "girl", origin: "Welsh", meaning: "beautiful, fair", note: "A fresh, short Welsh name." },
+      { name: "Tessa", gender: "girl", origin: "Greek (disputed)", meaning: "uncertain; often a short form of Theresa", note: "Light and friendly." },
+      { name: "Thalia", gender: "girl", origin: "Greek", meaning: "to blossom (the Muse of comedy)", note: "Lyrical and rare." },
+      { name: "Thea", gender: "girl", origin: "Greek", meaning: "goddess", note: "Short, bright and vintage-modern." },
+      { name: "Theodora", gender: "girl", origin: "Greek", meaning: "gift of God", note: "A Byzantine empress's name; nickname Teddy or Thea." },
+      { name: "Theresa", gender: "girl", origin: "Greek (disputed)", meaning: "uncertain; often read as 'harvester'", note: "A saint's name with a classic feel." },
+      { name: "Tiffany", gender: "girl", origin: "Greek", meaning: "manifestation of God (from Theophania)", note: "Glamorous and a well-known jeweller." },
+      { name: "Tilly", gender: "girl", origin: "English", meaning: "mighty in battle (from Matilda)", note: "Cheerful and lively." },
+      { name: "Trinity", gender: "girl", origin: "Latin", meaning: "the Holy Trinity, a group of three", note: "A spiritual word name." },
+      // Boys
+      { name: "Tanner", gender: "boy", origin: "English", meaning: "leather worker", note: "An occupational surname-name." },
+      { name: "Tate", gender: "boy", origin: "English", meaning: "cheerful", note: "Short and sunny." },
+      { name: "Thaddeus", gender: "boy", origin: "Aramaic", meaning: "uncertain; often read as 'courageous' or 'heart'", note: "A distinguished apostle's name; nickname Tad or Thad." },
+      { name: "Theo", gender: "boy", origin: "Greek", meaning: "god (short for Theodore)", note: "Friendly and widely loved." },
+      { name: "Theodore", gender: "boy", origin: "Greek", meaning: "gift of God", note: "A regal name with the nicknames Theo and Teddy." },
+      { name: "Thomas", gender: "boy", origin: "Aramaic", meaning: "twin", note: "A classic apostle's name; nickname Tom." },
+      { name: "Timothy", gender: "boy", origin: "Greek", meaning: "honouring God", note: "A friendly classic with the nickname Tim." },
+      { name: "Titus", gender: "boy", origin: "Latin", meaning: "uncertain; a Roman name", note: "Strong and ancient." },
+      { name: "Tobias", gender: "boy", origin: "Hebrew", meaning: "God is good", note: "Literary and warm; nickname Toby." },
+      { name: "Toby", gender: "boy", origin: "Hebrew", meaning: "God is good (from Tobias)", note: "Friendly and cheerful." },
+      { name: "Travis", gender: "boy", origin: "French", meaning: "toll collector (from traverser)", note: "A mid-century favourite." },
+      { name: "Trevor", gender: "boy", origin: "Welsh", meaning: "large settlement", note: "A solid, friendly name." },
+      { name: "Tristan", gender: "boy", origin: "Celtic (disputed)", meaning: "uncertain; the tragic lover in Arthurian legend", note: "Romantic and rare." },
+      { name: "Troy", gender: "boy", origin: "Irish / French", meaning: "foot soldier (Irish); or the city of Troy", note: "Strong and classical." },
+      { name: "Tucker", gender: "boy", origin: "English", meaning: "fuller of cloth", note: "An easygoing occupational name." },
+      { name: "Tyler", gender: "boy", origin: "English", meaning: "tile maker", note: "A familiar occupational name." },
+      // Unisex
+      { name: "Tatum", gender: "unisex", origin: "English", meaning: "cheerful (Tate's homestead)", note: "A surname-name that is used for any child." },
+      { name: "Taylor", gender: "unisex", origin: "English", meaning: "tailor", note: "An easy and well-known occupational name." },
+      { name: "Teagan", gender: "unisex", origin: "Irish", meaning: "little poet", note: "Light and modern." },
+    ],
+    faqs: [
+      { q: "What are the most popular baby names that start with T?", a: "Theodore, Thomas, Tyler and Tobias are well-known for boys, and Thea, Tessa and Tilly are popular for girls." },
+      { q: "What are unique baby names that start with T?", a: "Thalia, Tallulah, Thaddeus, Tamsin and Titus are rarer but easy to pronounce." },
+      { q: "What are gender-neutral baby names that start with T?", a: "Tatum, Taylor and Teagan are used for any gender." },
+      { q: "What does the name Theo mean?", a: "Theo is a short form of Theodore ('gift of God') and comes from the Greek theos, 'god'. It is also used as a stand-alone name." },
+    ],
+    updated: UPDATED,
+  },
+
+  // ── L ───────────────────────────────────────────────────────────────────────
+  {
+    slug: "l",
+    kind: "letter",
+    title: "Baby Names That Start With L: {n} Girl & Boy Names With Meanings",
+    metaTitle: "Baby Names Starting With L: {n} Girl & Boy Names + Meanings",
+    metaDescription:
+      "{n} baby names that start with L, from Luna and Lily to Luke and Leo. Meanings, origins and a short note on each name.",
+    kicker: "Names starting with L",
+    intro: [
+      "L names are flowing and melodic, which is why so many have become favourites: Luna, Lucy, Leo, Liam, Luke. This list gathers {n} names that start with L, with the meaning, origin and a short note on each.",
+      "Where an origin is disputed, as with Lorelei, Lara and Linus, we say so. Names are grouped by gender and ordered roughly from classic to distinctive.",
+    ],
+    featured: ["Lyra", "Linnea", "Lorelei", "Lachlan", "Leopold", "Lysander"],
+    tips: [
+      {
+        heading: "L is the most musical letter",
+        body: "The liquid 'l' gives names like Lila, Luna and Leo a smooth, singing quality. If you want a name that sounds gentle, L is a good letter.",
+      },
+      {
+        heading: "Light, lions and laurels",
+        body: "Many L names share themes: light (Lucy, Lucian, Luke), lions (Leo, Leon, Leona, Leonardo), and laurel (Lauren, Laurel, Lawrence). Choosing a name from a theme gives it a story to tell.",
+      },
+      {
+        heading: "Mind the double L",
+        body: "Names with 'll' or an ending 'a' (Lila, Lola, Lena) can sound alike. If you have other children, say the names together to avoid rhyming or too-similar sounds.",
+      },
+    ],
+    names: [
+      // Girls
+      { name: "Lara", gender: "girl", origin: "Latin / Russian", meaning: "uncertain; a Russian short form of Larisa", note: "Short and international." },
+      { name: "Laurel", gender: "girl", origin: "Latin", meaning: "the laurel tree", note: "A classic tree name that is a symbol of victory." },
+      { name: "Lavender", gender: "girl", origin: "English", meaning: "the lavender plant", note: "Soft and fragrant." },
+      { name: "Layla", gender: "girl", origin: "Arabic", meaning: "night", note: "A romantic name used across the Arabic-speaking world." },
+      { name: "Leah", gender: "girl", origin: "Hebrew", meaning: "uncertain; often read as 'weary'", note: "A biblical matriarch and a soft classic." },
+      { name: "Lena", gender: "girl", origin: "Various", meaning: "a short form of names such as Helena or Magdalena", note: "Short, light and international." },
+      { name: "Leona", gender: "girl", origin: "Latin", meaning: "lioness", note: "Vintage and strong." },
+      { name: "Lila", gender: "girl", origin: "Arabic / Sanskrit", meaning: "night (Arabic); play (Sanskrit)", note: "Two languages, two meanings." },
+      { name: "Liliana", gender: "girl", origin: "Latin", meaning: "lily", note: "A longer take on Lily." },
+      { name: "Lily", gender: "girl", origin: "English", meaning: "the lily flower", note: "A classic flower name that is a symbol of purity." },
+      { name: "Linnea", gender: "girl", origin: "Swedish", meaning: "twinflower (after botanist Carl Linnaeus)", note: "Rare and sweet." },
+      { name: "Livia", gender: "girl", origin: "Latin", meaning: "from the Roman family name Livius", note: "A Roman empress's name." },
+      { name: "Lola", gender: "girl", origin: "Spanish", meaning: "sorrows (a pet form of Dolores)", note: "Playful and vintage." },
+      { name: "Lorelei", gender: "girl", origin: "German", meaning: "uncertain; a rock on the Rhine", note: "A legendary siren." },
+      { name: "Louisa", gender: "girl", origin: "Germanic", meaning: "renowned warrior", note: "A literary classic, as in Louisa May Alcott." },
+      { name: "Lucy", gender: "girl", origin: "Latin", meaning: "light", note: "A friendly classic." },
+      { name: "Luna", gender: "girl", origin: "Latin", meaning: "moon", note: "The Roman moon goddess." },
+      { name: "Lydia", gender: "girl", origin: "Greek", meaning: "from Lydia, an ancient region of Asia Minor", note: "A New Testament name." },
+      { name: "Lyra", gender: "girl", origin: "Greek", meaning: "lyre", note: "A constellation and a musical name." },
+      // Boys
+      { name: "Lachlan", gender: "boy", origin: "Scottish", meaning: "from the land of lakes (or fjords)", note: "Scottish and strong; nickname Lachie." },
+      { name: "Landon", gender: "boy", origin: "English", meaning: "long hill", note: "A popular surname-name." },
+      { name: "Lawrence", gender: "boy", origin: "Latin", meaning: "from Laurentum (laurel)", note: "A classic with the nickname Larry or Laurie." },
+      { name: "Leo", gender: "boy", origin: "Latin", meaning: "lion", note: "Short, strong and loved." },
+      { name: "Leon", gender: "boy", origin: "Greek", meaning: "lion", note: "A classic that feels European." },
+      { name: "Leonardo", gender: "boy", origin: "Germanic / Italian", meaning: "brave lion", note: "Artistic and bold." },
+      { name: "Leopold", gender: "boy", origin: "Germanic", meaning: "brave people", note: "Regal and rare." },
+      { name: "Levi", gender: "boy", origin: "Hebrew", meaning: "attached, joined", note: "A biblical name with a casual sound." },
+      { name: "Lewis", gender: "boy", origin: "English", meaning: "renowned warrior (from Louis)", note: "A friendly classic." },
+      { name: "Liam", gender: "boy", origin: "Irish", meaning: "resolute protector (a short form of William)", note: "Short, strong and widely used." },
+      { name: "Lincoln", gender: "boy", origin: "English", meaning: "lake colony", note: "Presidential and modern." },
+      { name: "Lorenzo", gender: "boy", origin: "Italian", meaning: "from Laurentum", note: "A smooth Italian classic." },
+      { name: "Louis", gender: "boy", origin: "Germanic / French", meaning: "renowned warrior", note: "Royal and charming." },
+      { name: "Luca", gender: "boy", origin: "Italian", meaning: "man from Lucania (often linked to light)", note: "Quick and friendly." },
+      { name: "Lucas", gender: "boy", origin: "Latin", meaning: "man from Lucania (often linked to light)", note: "A widely used modern classic." },
+      { name: "Luke", gender: "boy", origin: "Greek", meaning: "man from Lucania (often linked to light)", note: "Short and friendly." },
+      { name: "Luther", gender: "boy", origin: "Germanic", meaning: "army of the people", note: "Strong and historic." },
+      { name: "Lysander", gender: "boy", origin: "Greek", meaning: "liberator", note: "A Spartan admiral and a Shakespearean romantic." },
+      // Unisex
+      { name: "Lee", gender: "unisex", origin: "English", meaning: "meadow", note: "A short, classic name." },
+      { name: "Lux", gender: "unisex", origin: "Latin", meaning: "light", note: "Short and modern." },
+      { name: "Lane", gender: "unisex", origin: "English", meaning: "a narrow road", note: "Plain and pleasant." },
+    ],
+    faqs: [
+      { q: "What are the most popular baby names that start with L?", a: "Luna, Lily and Lucy are popular for girls, while Liam, Lucas, Luke, Leo and Levi are popular for boys." },
+      { q: "What are unique baby names that start with L?", a: "Lorelei, Linnea, Lyra, Lachlan, Leopold and Lysander are rarer but easy to pronounce." },
+      { q: "What are gender-neutral baby names that start with L?", a: "Lee, Lux and Lane are used for any gender." },
+      { q: "What are L names that mean light?", a: "Lucy, Luca, Lucas, Luke and Lux are all linked to the Latin lux, 'light'. Luke, Luca and Lucas more precisely mean 'man from Lucania'." },
+    ],
+    updated: UPDATED,
+  },
+];

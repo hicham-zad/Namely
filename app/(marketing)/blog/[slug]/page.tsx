@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getPostBySlug, getRelatedPosts, getAllSlugs } from "@/lib/blog";
 import JsonLd from "@/components/layout/JsonLd";
+import StoreButtons from "@/components/layout/StoreButtons";
 import type { Article, BreadcrumbList, WithContext } from "schema-dts";
 
 export const revalidate = 3600;
@@ -178,15 +179,7 @@ export default async function BlogPostPage({
             <p style={{ fontSize: "0.82rem", color: "var(--text2)", marginBottom: "1rem", lineHeight: 1.5 }}>
               Swipe together, match instantly, and agree without the argument.
             </p>
-            <a
-              href="https://apps.apple.com/us/app/namely-baby-name-matcher/id6786483368"
-              target="_blank"
-              rel="noopener noreferrer"
-              id="blog-sidebar-cta"
-              style={{ display: "inline-flex", alignItems: "center", gap: 6, background: LOGO_BLUE, color: "#1f2937", fontWeight: 800, fontSize: "0.85rem", padding: "0.65rem 1.25rem", borderRadius: 999, textDecoration: "none" }}
-            >
-              Try Namely →
-            </a>
+            <StoreButtons idPrefix="blog-sidebar" align="center" />
           </div>
 
           {/* Related posts */}
@@ -223,10 +216,7 @@ export default async function BlogPostPage({
           <p style={{ color: "var(--text2)", fontSize: "0.9rem", marginBottom: "1.25rem" }}>
             Download Namely and invite your partner today.
           </p>
-          <a href="https://apps.apple.com/us/app/namely-baby-name-matcher/id6786483368" target="_blank" rel="noopener noreferrer" id="blog-post-bottom-cta"
-            style={{ display: "inline-flex", alignItems: "center", gap: 8, background: LOGO_BLUE, color: "#1f2937", fontWeight: 800, fontSize: "1rem", padding: "0.85rem 1.75rem", borderRadius: 999, textDecoration: "none", boxShadow: "0 4px 12px rgba(155, 204, 245, 0.4)" }}>
-            Start Matching →
-          </a>
+          <StoreButtons idPrefix="blog-bottom" align="center" />
         </div>
       </section>
 

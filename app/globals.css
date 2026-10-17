@@ -3,6 +3,7 @@
 @import "./components.css";
 @import "./pages.css";
 @import "./onboarding.css";
+@import "./marketing.css";
 
 @theme {
   --font-sans: var(--font-inter);
