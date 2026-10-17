@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { getSitemapPosts } from "@/lib/blog";
 import { getSitemapNames } from "@/lib/names";
 import { FEATURES } from "@/lib/features";
+import { allListPages, listPath } from "@/lib/name-lists";
 
 const SITE_URL = "https://matchbabynames.com";
 
@@ -71,6 +72,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.85,
   }));
 
-  return [...staticRoutes, ...blogRoutes, ...nameRoutes];
+  // Curated list pages ("names starting with A", "names that mean love")
+  const listRoutes: MetadataRoute.Sitemap = allListPages().map((p) => ({
+    url: `${SITE_URL}${listPath(p)}`,
+    lastModified: new Date(p.updated),
+    changeFrequency: "monthly" as const,
+    priority: 0.85,
+  }));
+
+  return [...staticRoutes, ...listRoutes, ...blogRoutes, ...nameRoutes];
 }
 
