@@ -1,0 +1,9 @@
+node_modules
+.next
+.git
+.asc
+.env.local
+*.log
+*.tsbuildinfo
+eas.json
+AuthKey_*
